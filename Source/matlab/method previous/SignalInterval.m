@@ -31,7 +31,7 @@ classdef SignalInterval < handle
                 si = si.HalfFrequency(1/frequency_double);
             end
 
-            if sampling_insert > 1
+            if sampling_insert >= 1
                 si = si.SamplingSignal(sampling_insert, sampling_time);
             end
 
