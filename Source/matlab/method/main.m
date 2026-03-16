@@ -8,5 +8,7 @@
 clc
 clearvars
 
-prs1 = PseudoRandomSignal(4, '2n');
-prs1.Sampling
+% prs1 = PseudoRandomSignal(4, '2n');
+% prs1.Sampling
+
+figure

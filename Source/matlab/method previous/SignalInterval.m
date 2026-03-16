@@ -101,7 +101,7 @@ classdef SignalInterval < handle
 
         function SpectrumFFT(si)
             n = length(si.signalArray)/2;
-            a = fft(si.signalArray);
+            a = fft(si.signalArray .* rectwin(2*n)'); % win or win
             si.frequency = (0:n-1)/si.samplingTime;
             si.amplitude = abs(a(1:n))/n;
         end 

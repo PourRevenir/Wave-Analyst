@@ -20,14 +20,14 @@ classdef PseudoRandomSignal < handle
                     assert(isscalar(frequencyList), ...
                         'For ''2n'' method, frequencyList should be a scalar.');
                     prs.frequencyList = 2.^((1:frequencyList)-1);
-                    prs.CreateSequence();
+                    prs.MakeSequence();
                 case 'pattern'
                     prs.sequence      = cat(2, frequencyList, -frequencyList);
                     prs.nSequence     = length(prs.sequence);
                     prs.frequencyList = 1;           
                 otherwise
                     prs.frequencyList = frequencyList;
-                    prs.CreateSequence();
+                    prs.MakeSequence();
             end
 
         end
@@ -44,7 +44,7 @@ classdef PseudoRandomSignal < handle
     end
 
     methods (Access = private)
-        function prs = CreateSequence(prs)
+        function prs = MakeSequence(prs)
             nFrequency         = length(prs.frequencyList);
             n_cols_half_matrix = prs.frequencyList(1);
             for i = 2:nFrequency
