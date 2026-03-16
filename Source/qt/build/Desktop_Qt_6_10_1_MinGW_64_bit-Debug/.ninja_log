@@ -1,0 +1,13 @@
+# ninja log v6
+4	187	7883000617061827	D:/qt/1/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	6809b1a013d6c0ee
+189	625	7883000622942162	1_autogen/timestamp	333e2775d4ffa0fe
+189	625	7883000622942162	1_autogen/mocs_compilation.cpp	333e2775d4ffa0fe
+189	625	7883000622942162	D:/qt/1/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/1_autogen/timestamp	333e2775d4ffa0fe
+189	625	7883000622942162	D:/qt/1/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/1_autogen/mocs_compilation.cpp	333e2775d4ffa0fe
+627	672	7883000623669726	1_autogen/EWIEGA46WW/qrc_resource.cpp	f685607f3e871ac0
+627	672	7883000623669726	D:/qt/1/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/1_autogen/EWIEGA46WW/qrc_resource.cpp	f685607f3e871ac0
+674	1179	7883000623769401	CMakeFiles/1.dir/1_autogen/EWIEGA46WW/qrc_resource.cpp.obj	429d94d0c95f60f
+672	2859	7883000623739493	CMakeFiles/1.dir/1_autogen/mocs_compilation.cpp.obj	9190e337672dec6d
+674	3053	7883000623759434	CMakeFiles/1.dir/mainwindow.cpp.obj	ecff855efd247d50
+673	5310	7883000623749461	CMakeFiles/1.dir/main.cpp.obj	9b6571f171be7eb
+5311	5440	7883000670134792	1.exe	d28f71fb6d26758b
