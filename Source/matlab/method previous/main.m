@@ -8,14 +8,14 @@
 clc
 clearvars
 
-prs1 = PseudoRandomSignal(7, 'prs_an', 1, 2);
-prs2 = PseudoRandomSignal([2 0 1 0 1 0 1 0 1 0 1 0 -1 0 -1 0 -1 0 -1 0 -1], 'pattern', 1, 2);
-prs2.arrayFrequency = [1 9];
+prs1 = PseudoRandomSignal([1 16], 'default', 5, 2);
+% prs2 = PseudoRandomSignal([2 0 1 0 1 0 1 0 1 0 1 0 -1 0 -1 0 -1 0 -1 0 -1], 'pattern', 1, 2);
+% prs2.arrayFrequency = [1 9];
 
-si1 = SignalInterval(prs1, 1, 5, 1);
-si2 = SignalInterval(prs2, 1, 16, 1);
+si1 = SignalInterval(prs1, 1, 1, 1);
+% si2 = SignalInterval(prs2, 1, 16, 1);
 
 ct = ChannelTask(si1);
-ct.AddInterval2Channel(si1);
+% ct.AddInterval2Channel(si2);
 
 ct.PlotCompositeSpectrum;

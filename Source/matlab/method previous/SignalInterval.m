@@ -31,7 +31,7 @@ classdef SignalInterval < handle
                 si = si.HalfFrequency(1/frequency_double);
             end
 
-            if sampling_insert > 1
+            if sampling_insert >= 1
                 si = si.SamplingSignal(sampling_insert, sampling_time);
             end
 
@@ -101,7 +101,7 @@ classdef SignalInterval < handle
 
         function SpectrumFFT(si)
             n = length(si.signalArray)/2;
-            a = fft(si.signalArray);
+            a = fft(si.signalArray .* rectwin(2*n)'); % win or win
             si.frequency = (0:n-1)/si.samplingTime;
             si.amplitude = abs(a(1:n))/n;
         end 
