@@ -11,4 +11,3 @@ clearvars
 % prs1 = PseudoRandomSignal(4, '2n');
 % prs1.Sampling
 
-figure

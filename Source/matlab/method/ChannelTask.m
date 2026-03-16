@@ -1,6 +1,6 @@
 classdef ChannelTask < handle
     properties (GetAccess = public, SetAccess = private)
-
+        
     end
 
     properties (Access = private)
