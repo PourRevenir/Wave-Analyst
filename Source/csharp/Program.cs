@@ -11,7 +11,7 @@ namespace WinFormsApp1
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            // 先显示启动界面
+            // 显示启动界面
             using (SplashForm splashForm = new SplashForm())
             {
 
@@ -21,7 +21,7 @@ namespace WinFormsApp1
                 splashForm.Visible = false;
                 splashForm.Close();
 
-                // 启动界面关闭后，显示主窗体
+                // 启动界面关闭，显示主窗体
                 Application.Run(new Form1());
             }
         }

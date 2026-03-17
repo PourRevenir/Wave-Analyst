@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\obj",
+    "\\Properties",
+    "\\Resources"
   ],
+  "SelectedNode": "\\obj\\project.assets.json",
   "PreviewInSolutionExplorer": false
 }
