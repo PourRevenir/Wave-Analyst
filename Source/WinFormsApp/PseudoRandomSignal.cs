@@ -8,7 +8,6 @@ namespace WindowsFormsApp
     {
         public double[] FrequencyList { get; private set; }
         public int NSequence { get; private set; }
-
         private double[] Sequence { get; set; }
 
         public PseudoRandomSignal(double[] frequencyList, string method = "default")

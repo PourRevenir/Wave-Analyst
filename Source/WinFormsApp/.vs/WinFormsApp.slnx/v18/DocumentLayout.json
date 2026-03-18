@@ -7,16 +7,8 @@
       "RelativeMoniker": "D:0:0:{D707ABCB-DA68-D66A-A644-FC1D68C3C5E9}|WinFormsApp.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D707ABCB-DA68-D66A-A644-FC1D68C3C5E9}|WinFormsApp.csproj|g:\\programfiles\\time_frequency_domain_pseudo_random_signal\\wave analyst\\source\\winformsapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D707ABCB-DA68-D66A-A644-FC1D68C3C5E9}|WinFormsApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D707ABCB-DA68-D66A-A644-FC1D68C3C5E9}|WinFormsApp.csproj|g:\\programfiles\\time_frequency_domain_pseudo_random_signal\\wave analyst\\source\\winformsapp\\pseudorandomsignal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D707ABCB-DA68-D66A-A644-FC1D68C3C5E9}|WinFormsApp.csproj|solutionrelative:pseudorandomsignal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D707ABCB-DA68-D66A-A644-FC1D68C3C5E9}|WinFormsApp.csproj|g:\\programfiles\\time_frequency_domain_pseudo_random_signal\\wave analyst\\source\\winformsapp\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
-      "RelativeMoniker": "D:0:0:{D707ABCB-DA68-D66A-A644-FC1D68C3C5E9}|WinFormsApp.csproj|solutionrelative:properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,20 +18,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 842,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainForm.cs",
-              "DocumentMoniker": "G:\\ProgramFiles\\Time_frequency_domain_pseudo_random_signal\\Wave Analyst\\Source\\WinFormsApp\\MainForm.cs",
-              "RelativeDocumentMoniker": "MainForm.cs",
-              "ToolTip": "G:\\ProgramFiles\\Time_frequency_domain_pseudo_random_signal\\Wave Analyst\\Source\\WinFormsApp\\MainForm.cs",
-              "RelativeToolTip": "MainForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "PseudoRandomSignal.cs",
+              "DocumentMoniker": "G:\\ProgramFiles\\Time_frequency_domain_pseudo_random_signal\\Wave Analyst\\Source\\WinFormsApp\\PseudoRandomSignal.cs",
+              "RelativeDocumentMoniker": "PseudoRandomSignal.cs",
+              "ToolTip": "G:\\ProgramFiles\\Time_frequency_domain_pseudo_random_signal\\Wave Analyst\\Source\\WinFormsApp\\PseudoRandomSignal.cs",
+              "RelativeToolTip": "PseudoRandomSignal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T01:38:47.401Z",
-              "IsPinned": true,
+              "WhenOpened": "2026-03-18T01:05:00.576Z",
               "EditorCaption": ""
             },
             {
@@ -52,40 +43,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "G:\\ProgramFiles\\Time_frequency_domain_pseudo_random_signal\\Wave Analyst\\Source\\WinFormsApp\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "G:\\ProgramFiles\\Time_frequency_domain_pseudo_random_signal\\Wave Analyst\\Source\\WinFormsApp\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAA1wAIAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "G:\\ProgramFiles\\Time_frequency_domain_pseudo_random_signal\\Wave Analyst\\Source\\WinFormsApp\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "G:\\ProgramFiles\\Time_frequency_domain_pseudo_random_signal\\Wave Analyst\\Source\\WinFormsApp\\MainForm.cs",
+              "RelativeToolTip": "MainForm.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T01:36:27.356Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PseudoRandomSignal.cs",
-              "DocumentMoniker": "G:\\ProgramFiles\\Time_frequency_domain_pseudo_random_signal\\Wave Analyst\\Source\\WinFormsApp\\PseudoRandomSignal.cs",
-              "RelativeDocumentMoniker": "PseudoRandomSignal.cs",
-              "ToolTip": "G:\\ProgramFiles\\Time_frequency_domain_pseudo_random_signal\\Wave Analyst\\Source\\WinFormsApp\\PseudoRandomSignal.cs",
-              "RelativeToolTip": "PseudoRandomSignal.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T01:38:27.331Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Resources.resx",
-              "DocumentMoniker": "G:\\ProgramFiles\\Time_frequency_domain_pseudo_random_signal\\Wave Analyst\\Source\\WinFormsApp\\Properties\\Resources.resx",
-              "RelativeDocumentMoniker": "Properties\\Resources.resx",
-              "ToolTip": "G:\\ProgramFiles\\Time_frequency_domain_pseudo_random_signal\\Wave Analyst\\Source\\WinFormsApp\\Properties\\Resources.resx",
-              "RelativeToolTip": "Properties\\Resources.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2026-03-17T01:44:29.634Z",
+              "WhenOpened": "2026-03-18T01:00:58.166Z",
               "EditorCaption": ""
             }
           ]
