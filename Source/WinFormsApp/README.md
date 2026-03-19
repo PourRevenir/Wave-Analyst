@@ -4,4 +4,4 @@
 绘制 ：ScottPlot
 
 ## image
-![image](../resource/SplashFigure.png)
+![image](resource/SplashFigure.png)
