@@ -69,6 +69,8 @@ namespace WinFormsApp
             double[] ampArray = _amplitudeList.ToArray();                // 幅值数组
             // 绘制新的时间域信号图像
             formsPlot1.Plot.Add.Scatter(timeArray, ampArray);
+            formsPlot1.Plot.XLabel("t (s)");
+
             formsPlot1.Refresh();
         }
 

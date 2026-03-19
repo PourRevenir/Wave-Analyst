@@ -58,7 +58,7 @@ namespace WinFormsApp
             Controls.Add(label1);
             Controls.Add(formsPlot1);
             Name = "UserControl1";
-            Size = new Size(1200, 800);
+            Size = new Size(1228, 367);
             ResumeLayout(false);
             PerformLayout();
         }

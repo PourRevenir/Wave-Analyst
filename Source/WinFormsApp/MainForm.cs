@@ -113,6 +113,9 @@ namespace WinFormsApp
                             MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
+
+
+
                     // 检查userControl组件是否已存在
                     // 如果已经存在，先移除旧的组件
                     if (this.Controls.OfType<UserControl1>().Any())
@@ -127,11 +130,11 @@ namespace WinFormsApp
                     // 显示用户组件
                     UserControl1 userControl_t = new UserControl1();
                     //添加到窗口中显示Form.ControlCollection.Add(Control) 方法
-                    this.Controls.Add(userControl_t);
+                    tableLayoutPanel1.Controls.Add(userControl_t, 0, 0);
 
                     // 控件属性
                     userControl_t.Dock = DockStyle.Fill;  // 填满容器
-                    
+
                     // 绘制
                     userControl_t.LoadData(timeList, amplitudeList);
 
@@ -147,17 +150,29 @@ namespace WinFormsApp
                     {
                         var existingControl = this.Controls.OfType<UserControl2>().First();
                         this.Controls.Remove(existingControl);
-                        existingControl.Dispose(); 
+                        existingControl.Dispose();
                     }
                     UserControl2 userControl_f = new UserControl2();
-                    this.Controls.Add(userControl_f);
+                    tableLayoutPanel1.Controls.Add(userControl_f,0,1);
                     userControl_f.Dock = DockStyle.Fill;
 
-                    (double[] Frequencies, double[] Amplitudes)=FFT.SimpleFFT(timeList, amplitudeList);
+                    (double[] Frequencies, double[] Amplitudes) = FFT.SimpleFFT(timeList, amplitudeList);
                     frequencyList_f = Frequencies.ToList();
                     amplitudeList_f = Amplitudes.ToList();
 
                     userControl_f.LoadData(frequencyList_f, amplitudeList_f);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

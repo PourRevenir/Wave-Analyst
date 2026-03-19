@@ -12,10 +12,7 @@ namespace WinFormsApp
 {
     public partial class UserControl2 : UserControl
     {
-        public UserControl2()
-        {
-            InitializeComponent();
-        }
+
 
 
         //定义公共接口 绘图
@@ -33,6 +30,13 @@ namespace WinFormsApp
             set { _amplitudeList = value; }
         }
 
+
+        public UserControl2()
+        {
+            InitializeComponent();
+
+
+        }
 
 
         // 绘制频率域信号图像
@@ -64,15 +68,20 @@ namespace WinFormsApp
             double[] ampArray = _amplitudeList.ToArray();                // 幅值数组
             // 绘制新的时间域信号图像
             formsPlot2.Plot.Add.Scatter(frequencyArray, ampArray);
+            formsPlot2.Plot.XLabel("Frequency (Hz)");
+
             formsPlot2.Refresh();
         }
 
+        private void formsPlot2_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 
 
 
 
 
-    
+
 }

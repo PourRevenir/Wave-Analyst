@@ -47,6 +47,7 @@
             Hamming窗FFTToolStripMenuItem = new ToolStripMenuItem();
             Blackman窗FFTToolStripMenuItem = new ToolStripMenuItem();
             分析ToolStripMenuItem = new ToolStripMenuItem();
+            tableLayoutPanel1 = new TableLayoutPanel();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -71,33 +72,33 @@
             // 打开ToolStripMenuItem
             // 
             打开ToolStripMenuItem.Name = "打开ToolStripMenuItem";
-            打开ToolStripMenuItem.Size = new Size(180, 22);
+            打开ToolStripMenuItem.Size = new Size(112, 22);
             打开ToolStripMenuItem.Text = "打开";
             打开ToolStripMenuItem.Click += 打开ToolStripMenuItem_Click;
             // 
             // 保存ToolStripMenuItem
             // 
             保存ToolStripMenuItem.Name = "保存ToolStripMenuItem";
-            保存ToolStripMenuItem.Size = new Size(180, 22);
+            保存ToolStripMenuItem.Size = new Size(112, 22);
             保存ToolStripMenuItem.Text = "保存";
             // 
             // 另存为ToolStripMenuItem
             // 
             另存为ToolStripMenuItem.Name = "另存为ToolStripMenuItem";
-            另存为ToolStripMenuItem.Size = new Size(180, 22);
+            另存为ToolStripMenuItem.Size = new Size(112, 22);
             另存为ToolStripMenuItem.Text = "另存为";
             // 
             // 打印ToolStripMenuItem
             // 
             打印ToolStripMenuItem.Name = "打印ToolStripMenuItem";
-            打印ToolStripMenuItem.Size = new Size(180, 22);
+            打印ToolStripMenuItem.Size = new Size(112, 22);
             打印ToolStripMenuItem.Text = "打印";
             // 
             // 导出ToolStripMenuItem
             // 
             导出ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { pNG图片ToolStripMenuItem, jPG图片ToolStripMenuItem });
             导出ToolStripMenuItem.Name = "导出ToolStripMenuItem";
-            导出ToolStripMenuItem.Size = new Size(180, 22);
+            导出ToolStripMenuItem.Size = new Size(112, 22);
             导出ToolStripMenuItem.Text = "导出";
             // 
             // pNG图片ToolStripMenuItem
@@ -167,11 +168,26 @@
             分析ToolStripMenuItem.Size = new Size(44, 21);
             分析ToolStripMenuItem.Text = "分析";
             // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.ColumnCount = 1;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(0, 25);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 2;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Size = new Size(1184, 736);
+            tableLayoutPanel1.TabIndex = 1;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1184, 761);
+            Controls.Add(tableLayoutPanel1);
             Controls.Add(menuStrip1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
@@ -206,5 +222,6 @@
         private ToolStripMenuItem 分析ToolStripMenuItem;
         private ToolStripMenuItem pNG图片ToolStripMenuItem;
         private ToolStripMenuItem jPG图片ToolStripMenuItem;
+        private TableLayoutPanel tableLayoutPanel1;
     }
 }

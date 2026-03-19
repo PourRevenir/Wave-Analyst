@@ -34,10 +34,11 @@
             // formsPlot2
             // 
             formsPlot2.DisplayScale = 1F;
-            formsPlot2.Location = new Point(16, 300);
+            formsPlot2.Location = new Point(0, 0);
             formsPlot2.Name = "formsPlot2";
-            formsPlot2.Size = new Size(1147, 263);
+            formsPlot2.Size = new Size(1167, 330);
             formsPlot2.TabIndex = 0;
+            formsPlot2.Load += formsPlot2_Load;
             // 
             // UserControl2
             // 
@@ -45,7 +46,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(formsPlot2);
             Name = "UserControl2";
-            Size = new Size(1200, 800);
+            Size = new Size(1342, 394);
             ResumeLayout(false);
         }
 
