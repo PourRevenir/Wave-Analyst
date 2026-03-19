@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,6 +19,7 @@ namespace WinFormsApp
             InitializeComponent();
         }
 
+<<<<<<< HEAD
 
         //用ToolStripMenuItem.DropDownItems.AddRange
         // ToolStripBox 改用Item
@@ -43,6 +45,9 @@ namespace WinFormsApp
         /// 导入时间域信号文件，生成时间域信号图像，并保存到内存中
         /// </summary>
         private void 打开ToolStripMenuItem_Click(object sender, EventArgs e)
+=======
+        private void MainForm_Load(object sender, EventArgs e)
+>>>>>>> d8b314ed1c8fee77cfe29d5e38c369cb5055b80c
         {
 
             // 存储时间和幅值数据 以及文件名 map绑定
@@ -121,6 +126,7 @@ namespace WinFormsApp
 
      
         }
+<<<<<<< HEAD
 
 
 
@@ -135,5 +141,75 @@ namespace WinFormsApp
         }
         //********************** 菜单项事件处理函数**********************
 
+=======
+        private void 打开ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog())
+            {
+                ofd.Filter = "文本文件(*.txt)|*.txt|DAT文件(*.dat)|*.dat";
+                if(ofd.ShowDialog() == DialogResult.OK) { }
+            }
+        }
+
+        private void 保存ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog sfd = new SaveFileDialog())
+            {
+                sfd.Filter = "文本文件(*.txt)|*.txt|DAT文件(*.dat)|*.dat";
+                if (sfd.ShowDialog() == DialogResult.OK) { }
+            }
+        }
+
+        private void 另存为ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog sfd = new SaveFileDialog())
+            {
+                sfd.Filter = "文本文件(*.txt)|*.txt|DAT文件(*.dat)|*.dat";
+                if (sfd.ShowDialog() == DialogResult.OK) { }
+            }
+        }
+
+        private void 打印ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (PrintDialog pd = new PrintDialog())
+            {
+                if(pd.ShowDialog() == DialogResult.OK) { }
+            }
+        }
+
+        private void PNG图片ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog sfd = new SaveFileDialog())
+            {
+                sfd.Filter = "PNG图片(*.png)|*.png";
+                if (sfd.ShowDialog() == DialogResult.OK) { }
+            }
+
+        }
+
+        private void JPG图片ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog sfd = new SaveFileDialog())
+            {
+                sfd.Filter = "PNG图片(*.jpg)|*.jpg";
+                if (sfd.ShowDialog() == DialogResult.OK) { }
+            }
+
+        }
+
+        private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "确定要退出程序吗？",
+                "确认退出",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+>>>>>>> d8b314ed1c8fee77cfe29d5e38c369cb5055b80c
     }
 }

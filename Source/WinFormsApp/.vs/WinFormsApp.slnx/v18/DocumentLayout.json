@@ -31,6 +31,7 @@
       "RelativeMoniker": "D:0:0:{D707ABCB-DA68-D66A-A644-FC1D68C3C5E9}|WinFormsApp.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{D707ABCB-DA68-D66A-A644-FC1D68C3C5E9}|WinFormsApp.csproj|c:\\users\\administrator\\desktop\\work\\app\\wave-analyst\\source\\winformsapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D707ABCB-DA68-D66A-A644-FC1D68C3C5E9}|WinFormsApp.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -41,6 +42,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{D707ABCB-DA68-D66A-A644-FC1D68C3C5E9}|WinFormsApp.csproj|c:\\users\\administrator\\desktop\\work\\app\\wave-analyst\\source\\winformsapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D707ABCB-DA68-D66A-A644-FC1D68C3C5E9}|WinFormsApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{D707ABCB-DA68-D66A-A644-FC1D68C3C5E9}|WinFormsApp.csproj|g:\\programfiles\\time_frequency_domain_pseudo_random_signal\\wave analyst\\source\\winformsapp\\pseudorandomsignal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D707ABCB-DA68-D66A-A644-FC1D68C3C5E9}|WinFormsApp.csproj|solutionrelative:pseudorandomsignal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> d8b314ed1c8fee77cfe29d5e38c369cb5055b80c
     }
   ],
   "DocumentGroupContainers": [
@@ -50,10 +55,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 842,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 0,
               "Title": "UserControl1.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\WinFormsApp\\UserControl1.cs",
@@ -64,6 +70,17 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-19T08:33:52.199Z",
               "IsPinned": true,
+=======
+              "DocumentIndex": 1,
+              "Title": "PseudoRandomSignal.cs",
+              "DocumentMoniker": "G:\\ProgramFiles\\Time_frequency_domain_pseudo_random_signal\\Wave Analyst\\Source\\WinFormsApp\\PseudoRandomSignal.cs",
+              "RelativeDocumentMoniker": "PseudoRandomSignal.cs",
+              "ToolTip": "G:\\ProgramFiles\\Time_frequency_domain_pseudo_random_signal\\Wave Analyst\\Source\\WinFormsApp\\PseudoRandomSignal.cs",
+              "RelativeToolTip": "PseudoRandomSignal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T01:05:00.576Z",
+>>>>>>> d8b314ed1c8fee77cfe29d5e38c369cb5055b80c
               "EditorCaption": ""
             },
             {
@@ -80,6 +97,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 4,
               "Title": "UserControl1.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\WinFormsApp\\UserControl1.Designer.cs",
@@ -178,6 +196,17 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwBQAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-17T01:36:27.356Z",
+=======
+              "DocumentIndex": 0,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "G:\\ProgramFiles\\Time_frequency_domain_pseudo_random_signal\\Wave Analyst\\Source\\WinFormsApp\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "G:\\ProgramFiles\\Time_frequency_domain_pseudo_random_signal\\Wave Analyst\\Source\\WinFormsApp\\MainForm.cs",
+              "RelativeToolTip": "MainForm.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T01:00:58.166Z",
+>>>>>>> d8b314ed1c8fee77cfe29d5e38c369cb5055b80c
               "EditorCaption": ""
             }
           ]
