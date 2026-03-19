@@ -1,8 +1,6 @@
-﻿using ScottPlot.WinForms;
-
-namespace WinFormsApp
+﻿namespace WinFormsApp
 {
-    partial class UserControl1
+    partial class UserControl2
     {
         /// <summary> 
         /// 必需的设计器变量。
@@ -30,55 +28,29 @@ namespace WinFormsApp
         /// </summary>
         private void InitializeComponent()
         {
-            formsPlot1 = new FormsPlot();
-            label1 = new Label();
+            formsPlot2 = new ScottPlot.WinForms.FormsPlot();
             SuspendLayout();
             // 
-            // formsPlot1
+            // formsPlot2
             // 
-            formsPlot1.DisplayScale = 1F;
-            formsPlot1.Location = new Point(14, 29);
-            formsPlot1.Name = "formsPlot1";
-            formsPlot1.Size = new Size(1167, 330);
-            formsPlot1.TabIndex = 0;
+            formsPlot2.DisplayScale = 1F;
+            formsPlot2.Location = new Point(16, 300);
+            formsPlot2.Name = "formsPlot2";
+            formsPlot2.Size = new Size(1147, 263);
+            formsPlot2.TabIndex = 0;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(561, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(68, 17);
-            label1.TabIndex = 1;
-            label1.Text = "时间域信号";
-            // 
-            // UserControl1
+            // UserControl2
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(label1);
-            Controls.Add(formsPlot1);
-            Name = "UserControl1";
+            Controls.Add(formsPlot2);
+            Name = "UserControl2";
             Size = new Size(1200, 800);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private ScottPlot.WinForms.FormsPlot formsPlot1;
-        private Label label1;
-
-
-        
-
-
-
-
-
-
-
-
-
-
+        private ScottPlot.WinForms.FormsPlot formsPlot2;
     }
 }

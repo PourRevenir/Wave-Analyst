@@ -38,7 +38,6 @@
             导出ToolStripMenuItem = new ToolStripMenuItem();
             pNG图片ToolStripMenuItem = new ToolStripMenuItem();
             jPG图片ToolStripMenuItem = new ToolStripMenuItem();
-            退出ToolStripMenuItem = new ToolStripMenuItem();
             编辑ToolStripMenuItem = new ToolStripMenuItem();
             选项ToolStripMenuItem = new ToolStripMenuItem();
             处理ToolStripMenuItem = new ToolStripMenuItem();
@@ -57,17 +56,14 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { 文件ToolStripMenuItem, 编辑ToolStripMenuItem, 选项ToolStripMenuItem, 处理ToolStripMenuItem, 分析ToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-
             menuStrip1.Padding = new Padding(5, 2, 0, 2);
-            menuStrip1.Size = new Size(886, 25);
-
-            menuStrip1.Size = new Size(1182, 32);
+            menuStrip1.Size = new Size(1184, 25);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
             // 文件ToolStripMenuItem
             // 
-            文件ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { 打开ToolStripMenuItem, 保存ToolStripMenuItem, 另存为ToolStripMenuItem, 打印ToolStripMenuItem, 导出ToolStripMenuItem, 退出ToolStripMenuItem });
+            文件ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { 打开ToolStripMenuItem, 保存ToolStripMenuItem, 另存为ToolStripMenuItem, 打印ToolStripMenuItem, 导出ToolStripMenuItem });
             文件ToolStripMenuItem.Name = "文件ToolStripMenuItem";
             文件ToolStripMenuItem.Size = new Size(44, 21);
             文件ToolStripMenuItem.Text = "文件";
@@ -75,66 +71,46 @@
             // 打开ToolStripMenuItem
             // 
             打开ToolStripMenuItem.Name = "打开ToolStripMenuItem";
-            打开ToolStripMenuItem.Size = new Size(112, 22);
+            打开ToolStripMenuItem.Size = new Size(180, 22);
             打开ToolStripMenuItem.Text = "打开";
             打开ToolStripMenuItem.Click += 打开ToolStripMenuItem_Click;
             // 
             // 保存ToolStripMenuItem
             // 
             保存ToolStripMenuItem.Name = "保存ToolStripMenuItem";
-            保存ToolStripMenuItem.Size = new Size(112, 22);
+            保存ToolStripMenuItem.Size = new Size(180, 22);
             保存ToolStripMenuItem.Text = "保存";
-            
             // 
             // 另存为ToolStripMenuItem
             // 
             另存为ToolStripMenuItem.Name = "另存为ToolStripMenuItem";
-            另存为ToolStripMenuItem.Size = new Size(112, 22);
+            另存为ToolStripMenuItem.Size = new Size(180, 22);
             另存为ToolStripMenuItem.Text = "另存为";
-            
             // 
             // 打印ToolStripMenuItem
             // 
             打印ToolStripMenuItem.Name = "打印ToolStripMenuItem";
-            打印ToolStripMenuItem.Size = new Size(112, 22);
+            打印ToolStripMenuItem.Size = new Size(180, 22);
             打印ToolStripMenuItem.Text = "打印";
-            
             // 
             // 导出ToolStripMenuItem
             // 
             导出ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { pNG图片ToolStripMenuItem, jPG图片ToolStripMenuItem });
             导出ToolStripMenuItem.Name = "导出ToolStripMenuItem";
-            导出ToolStripMenuItem.Size = new Size(112, 22);
+            导出ToolStripMenuItem.Size = new Size(180, 22);
             导出ToolStripMenuItem.Text = "导出";
             // 
             // pNG图片ToolStripMenuItem
             // 
             pNG图片ToolStripMenuItem.Name = "pNG图片ToolStripMenuItem";
-
             pNG图片ToolStripMenuItem.Size = new Size(126, 22);
-
-            pNG图片ToolStripMenuItem.Size = new Size(224, 26);
-
             pNG图片ToolStripMenuItem.Text = "PNG图片";
-            
             // 
             // jPG图片ToolStripMenuItem
             // 
             jPG图片ToolStripMenuItem.Name = "jPG图片ToolStripMenuItem";
-
             jPG图片ToolStripMenuItem.Size = new Size(126, 22);
-
-            jPG图片ToolStripMenuItem.Size = new Size(224, 26);
-
             jPG图片ToolStripMenuItem.Text = "JPG图片";
-            
-            // 
-            // 退出ToolStripMenuItem
-            // 
-            退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            退出ToolStripMenuItem.Size = new Size(224, 26);
-            退出ToolStripMenuItem.Text = "退出";
-            
             // 
             // 编辑ToolStripMenuItem
             // 
@@ -150,7 +126,6 @@
             // 
             // 处理ToolStripMenuItem
             // 
-
             处理ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { FFT频谱分析ToolStripMenuItem, PSD功率谱分析ToolStripMenuItem, Hann窗FFTToolStripMenuItem, Hamming窗FFTToolStripMenuItem, Blackman窗FFTToolStripMenuItem });
             处理ToolStripMenuItem.Name = "处理ToolStripMenuItem";
             处理ToolStripMenuItem.Size = new Size(44, 21);
@@ -185,9 +160,6 @@
             Blackman窗FFTToolStripMenuItem.Name = "Blackman窗FFTToolStripMenuItem";
             Blackman窗FFTToolStripMenuItem.Size = new Size(163, 22);
             Blackman窗FFTToolStripMenuItem.Text = "Blackman窗FFT";
-
-          
-
             // 
             // 分析ToolStripMenuItem
             // 
@@ -199,21 +171,15 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-
-            ClientSize = new Size(886, 531);
-
-            ClientSize = new Size(1182, 753);
-
+            ClientSize = new Size(1184, 761);
             Controls.Add(menuStrip1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             Margin = new Padding(2, 3, 2, 3);
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "MainForm";
-
+            Text = "Wave";
             Load += MainForm_Load;
-
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
@@ -229,7 +195,6 @@
         private ToolStripMenuItem 另存为ToolStripMenuItem;
         private ToolStripMenuItem 打印ToolStripMenuItem;
         private ToolStripMenuItem 导出ToolStripMenuItem;
-        private ToolStripMenuItem 退出ToolStripMenuItem;
         private ToolStripMenuItem 编辑ToolStripMenuItem;
         private ToolStripMenuItem 选项ToolStripMenuItem;
         private ToolStripMenuItem 处理ToolStripMenuItem;
