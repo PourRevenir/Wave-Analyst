@@ -9,6 +9,10 @@ Wave Analyst is a software tool designed for performing signal analysis in Wide 
 
 ## Updata Log
 
+### January 3, 2026
+- Algorithmic is updated
+- Application for Windows is compiled 
+
 ### December 12, 2025
 
 - Initial release of Wave Analyst (version 0.0.1)
