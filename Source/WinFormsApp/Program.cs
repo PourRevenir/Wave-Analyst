@@ -17,7 +17,8 @@ namespace WinFormsApp
                 splashForm.Visible = false;
                 splashForm.Close();
             }
-            Application.Run(new MainForm());
+
+            Application.Run(new MainForm()); //启动MainForm窗体
         }
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WinFormsApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+784a1c280fa6cd21e21dd6a9194a4ac924436bfb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d0759f9951cfaae8447224eeb9a19ce978348a3")]
 [assembly: System.Reflection.AssemblyProductAttribute("WinFormsApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Wave Analyst")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
