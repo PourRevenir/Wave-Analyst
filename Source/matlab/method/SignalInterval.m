@@ -1,60 +1,58 @@
 classdef SignalInterval < handle
     properties (GetAccess = public, SetAccess = public)
-        signal           
-        samplingFrequency 
-        samplingTime
-        arrayFrequency
+       signal            (1, :) double = [-1 1]
+       samplingTime      (1, 1) double = 1
+       samplingFrequency (1, 1) double = 2
+       frequency         (1, :) double
+       amplitude         (1, :) double
+       dominantFrequency (1, :) double
+       dominantAmplitude (1, :) double
     end
 
     properties (Access = private)
-        signal4cal
-        sampling_time4cal
-        frequency
-        amplitude
-        markFrequency
-        markAmplitude
+        frequencyList    (1, :) double = 1
+        nSignal          (1, 1) double = 2
     end
 
     methods (Access = public)
-        function si = SignalInterval(interval_time)
+        function si = SignalInterval(frequency_list, n_interpolation, sampling_time)
+            prs = PseudoRandomSignal(frequency_list);
+            si.signal            = prs.Sampling(n_interpolation, sampling_time);
+            si.frequencyList     = frequency_list;
+            si.samplingTime      = sampling_time;
+            si.samplingFrequency = n_interpolation * prs.nSequence;
+            si.nSignal           = length(si.signal);
+            delete(prs); 
+
+            si.Spectrum();
+            si.MarkSpectrum();
+        end
+
+        function si = Sampling(si, n_interpolation)
             arguments
-                interval_time (1, 1) double {mustBePositive, mustBeReal} = 1
-            end 
-            si.samplingTime = interval_time;
+                si                    SignalInterval
+                n_interpolation (1,1) double = 1
+            end
+            si.samplingFrequency = n_interpolation * si.samplingFrequency; 
+            si.signal            = repelem(si.signal, n_interpolation);
+            si.Spectrum();
+            si.MarkSpectrum();
         end
-
-        function si = AddSignal(si)
-            
-        end
-
     end
 
     methods (Access = private)
         function si = Spectrum(si)
-        
-            n = length(si.signal)/2;
-            a = fft(si.signal.* hanning(2*n));
+            n = si.nSignal /2;
+            a = fft(si.signal); % win or win
             si.frequency = (0:n-1)/si.samplingTime;
             si.amplitude = abs(a(1:n))/n;
         end
 
-        function si = MarkSpectrum(si, nFrequency)
+        function si = MarkSpectrum(si)
             [~, index] = sort(si.amplitude,'descend');
-            index = index(1:nFrequency);
-            si.markFrequency = si.frequency(index);
-            si.markAmplitude = si.amplitude(index);
-        end
-
-        function si = Sampling(si)
-
-        end
-
-        function si = PhaseShift(si)
-
-        end
-
-        function si = MultiFrequency(si)
-
+            index = index(1:length(si.frequencyList));
+            si.dominantFrequency = si.frequency(index);
+            si.dominantAmplitude = si.amplitude(index);
         end
     end
 end

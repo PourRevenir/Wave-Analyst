@@ -8,6 +8,10 @@
 clc
 clearvars
 
-% prs1 = PseudoRandomSignal(4, '2n');
-% prs1.Sampling
+% ct = ChannelTask();
+% ct.AddInterval();
+% ct.AddInterval();
+
+
+
 

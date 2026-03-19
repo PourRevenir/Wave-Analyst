@@ -8,7 +8,7 @@ namespace WindowsFormsApp
     {
         public double[] FrequencyList { get; private set; }
         public int NSequence { get; private set; }
-        private double[] Sequence { get; set; }
+        private double[] Sequence { get; set; } = Array.Empty<double>();
 
         public PseudoRandomSignal(double[] frequencyList, string method = "default")
         {
@@ -138,12 +138,12 @@ namespace WindowsFormsApp
             }
         }
 
-        private int LCM(int a, int b)
+        private static int LCM(int a, int b)
         {
-            return (a / GCD(a, b)) * b;
+            return a / GCD(a, b) * b;
         }
 
-        private int GCD(int a, int b)
+        private static int GCD(int a, int b)
         {
             while (b != 0)
             {

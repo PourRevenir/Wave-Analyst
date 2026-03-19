@@ -1,42 +1,27 @@
 classdef PseudoRandomSignal < handle
     properties (GetAccess = public, SetAccess = private)
-        frequencyList
+        frequencyList % -> this -> sequence
         nSequence
     end
 
     properties (Access = private)
-        sequence
+        sequence % -> Sampling -> signal
     end
 
     methods (Access = public)
-        function prs = PseudoRandomSignal(frequencyList, method)
+        function prs = PseudoRandomSignal(frequencyList)
             arguments
-                frequencyList (1, :) double {mustBePositive, mustBeInteger} = 1
-                method               string = 'default'
+                frequencyList (1, :) double = 1
             end
-
-            switch method
-                case '2n'
-                    assert(isscalar(frequencyList), ...
-                        'For ''2n'' method, frequencyList should be a scalar.');
-                    prs.frequencyList = 2.^((1:frequencyList)-1);
-                    prs.MakeSequence();
-                case 'pattern'
-                    prs.sequence      = cat(2, frequencyList, -frequencyList);
-                    prs.nSequence     = length(prs.sequence);
-                    prs.frequencyList = 1;           
-                otherwise
-                    prs.frequencyList = frequencyList;
-                    prs.MakeSequence();
-            end
-
+                prs.frequencyList = frequencyList;
+                prs.MakeSequence();
         end
 
         function signal = Sampling(prs, n_interpolation, sampling_time)
             arguments
                 prs             (1,1) PseudoRandomSignal
-                n_interpolation (1,1) double {mustBeInteger, mustBePositive} = 1
-                sampling_time   (1,1) double {mustBeInteger, mustBePositive} = 1
+                n_interpolation (1,1) double = 1
+                sampling_time   (1,1) double = 1
             end
             signal = repmat(repelem(prs.sequence, n_interpolation), ...
                                     1, sampling_time);
@@ -62,5 +47,4 @@ classdef PseudoRandomSignal < handle
             prs.sequence = sign(sum(sequenceMatrix, 1));
         end
     end
-
 end

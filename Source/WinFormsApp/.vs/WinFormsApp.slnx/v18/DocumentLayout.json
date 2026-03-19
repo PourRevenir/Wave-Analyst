@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "G:\\ProgramFiles\\Time_frequency_domain_pseudo_random_signal\\Wave Analyst\\Source\\WinFormsApp\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{D707ABCB-DA68-D66A-A644-FC1D68C3C5E9}|WinFormsApp.csproj|g:\\programfiles\\time_frequency_domain_pseudo_random_signal\\wave analyst\\source\\winformsapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D707ABCB-DA68-D66A-A644-FC1D68C3C5E9}|WinFormsApp.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D707ABCB-DA68-D66A-A644-FC1D68C3C5E9}|WinFormsApp.csproj|g:\\programfiles\\time_frequency_domain_pseudo_random_signal\\wave analyst\\source\\winformsapp\\pseudorandomsignal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D707ABCB-DA68-D66A-A644-FC1D68C3C5E9}|WinFormsApp.csproj|solutionrelative:pseudorandomsignal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,21 +9,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 842,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PseudoRandomSignal.cs",
-              "DocumentMoniker": "G:\\ProgramFiles\\Time_frequency_domain_pseudo_random_signal\\Wave Analyst\\Source\\WinFormsApp\\PseudoRandomSignal.cs",
-              "RelativeDocumentMoniker": "PseudoRandomSignal.cs",
-              "ToolTip": "G:\\ProgramFiles\\Time_frequency_domain_pseudo_random_signal\\Wave Analyst\\Source\\WinFormsApp\\PseudoRandomSignal.cs",
-              "RelativeToolTip": "PseudoRandomSignal.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T01:05:00.576Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{26341fe2-71dd-46fd-bb1b-2e51a92a0d64}"
@@ -40,19 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainForm.cs",
-              "DocumentMoniker": "G:\\ProgramFiles\\Time_frequency_domain_pseudo_random_signal\\Wave Analyst\\Source\\WinFormsApp\\MainForm.cs",
-              "RelativeDocumentMoniker": "MainForm.cs",
-              "ToolTip": "G:\\ProgramFiles\\Time_frequency_domain_pseudo_random_signal\\Wave Analyst\\Source\\WinFormsApp\\MainForm.cs",
-              "RelativeToolTip": "MainForm.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T01:00:58.166Z",
-              "EditorCaption": ""
             }
           ]
         }
