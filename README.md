@@ -9,7 +9,7 @@ Wave Analyst is a software tool designed for performing signal analysis in Wide 
 
 
 
-!\[image](Source/WinFormsApp/resource/SplashFigure.png)
+!\[image](./Source/WinFormsApp/resource/SplashFigure.png)
 
 ## Updata Log
 
