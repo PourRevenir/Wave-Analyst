@@ -35,6 +35,7 @@ classdef SignalInterval < handle
             end
             si.samplingFrequency = n_interpolation * si.samplingFrequency; 
             si.signal            = repelem(si.signal, n_interpolation);
+            si.nSignal           = length(si.signal);
             si.Spectrum();
             si.MarkSpectrum();
         end

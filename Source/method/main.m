@@ -8,10 +8,15 @@
 clc
 clearvars
 
-% ct = ChannelTask();
-% ct.AddInterval();
-% ct.AddInterval();
+ct = ChannelTask();
 
 
+ct.AddInterval(2, [1 32]);
+ct.AddInterval(2, [1 2 4 8 16 32]);
 
+ct.PlotSpectrum();
 
+% ct.SignalStack{1}
+% ct.SignalStack{2}
+% % ct.SignalStack{3}
+% length(ct.signal)
