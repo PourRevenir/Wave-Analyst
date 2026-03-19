@@ -7,11 +7,13 @@ All rights reserved.
 
 Wave Analyst is a software tool designed for performing signal analysis in Wide Field Electromagnetic Method(WFEM). It provides functionalities to calculate, analyze, and visualize broad-spectrum-combined-wave almost any sequence of pseudo-random-signal.
 
-## image、
+## image
 
  ![alt](./image/3.png)
  ![alt](./image/1.png)
+  ![alt](./image/4.png)
  ![alt](./image/2.png)
+
 
 ## Updata Log
 1. Download Pgae

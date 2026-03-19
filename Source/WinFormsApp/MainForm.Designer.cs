@@ -38,9 +38,9 @@
             导出ToolStripMenuItem = new ToolStripMenuItem();
             pNG图片ToolStripMenuItem = new ToolStripMenuItem();
             jPG图片ToolStripMenuItem = new ToolStripMenuItem();
-            编辑ToolStripMenuItem = new ToolStripMenuItem();
-            选项ToolStripMenuItem = new ToolStripMenuItem();
-            处理ToolStripMenuItem = new ToolStripMenuItem();
+            通道ToolStripMenuItem = new ToolStripMenuItem();
+            通道ToolStripMenuItem1 = new ToolStripMenuItem();
+            加窗ToolStripMenuItem = new ToolStripMenuItem();
             FFT频谱分析ToolStripMenuItem = new ToolStripMenuItem();
             PSD功率谱分析ToolStripMenuItem = new ToolStripMenuItem();
             Hann窗FFTToolStripMenuItem = new ToolStripMenuItem();
@@ -48,13 +48,15 @@
             Blackman窗FFTToolStripMenuItem = new ToolStripMenuItem();
             分析ToolStripMenuItem = new ToolStripMenuItem();
             tableLayoutPanel1 = new TableLayoutPanel();
+            menuStrip2 = new MenuStrip();
             menuStrip1.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { 文件ToolStripMenuItem, 编辑ToolStripMenuItem, 选项ToolStripMenuItem, 处理ToolStripMenuItem, 分析ToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { 文件ToolStripMenuItem, 通道ToolStripMenuItem, 加窗ToolStripMenuItem, 分析ToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(5, 2, 0, 2);
@@ -72,33 +74,33 @@
             // 打开ToolStripMenuItem
             // 
             打开ToolStripMenuItem.Name = "打开ToolStripMenuItem";
-            打开ToolStripMenuItem.Size = new Size(112, 22);
+            打开ToolStripMenuItem.Size = new Size(180, 22);
             打开ToolStripMenuItem.Text = "打开";
             打开ToolStripMenuItem.Click += 打开ToolStripMenuItem_Click;
             // 
             // 保存ToolStripMenuItem
             // 
             保存ToolStripMenuItem.Name = "保存ToolStripMenuItem";
-            保存ToolStripMenuItem.Size = new Size(112, 22);
+            保存ToolStripMenuItem.Size = new Size(180, 22);
             保存ToolStripMenuItem.Text = "保存";
             // 
             // 另存为ToolStripMenuItem
             // 
             另存为ToolStripMenuItem.Name = "另存为ToolStripMenuItem";
-            另存为ToolStripMenuItem.Size = new Size(112, 22);
+            另存为ToolStripMenuItem.Size = new Size(180, 22);
             另存为ToolStripMenuItem.Text = "另存为";
             // 
             // 打印ToolStripMenuItem
             // 
             打印ToolStripMenuItem.Name = "打印ToolStripMenuItem";
-            打印ToolStripMenuItem.Size = new Size(112, 22);
+            打印ToolStripMenuItem.Size = new Size(180, 22);
             打印ToolStripMenuItem.Text = "打印";
             // 
             // 导出ToolStripMenuItem
             // 
             导出ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { pNG图片ToolStripMenuItem, jPG图片ToolStripMenuItem });
             导出ToolStripMenuItem.Name = "导出ToolStripMenuItem";
-            导出ToolStripMenuItem.Size = new Size(112, 22);
+            导出ToolStripMenuItem.Size = new Size(180, 22);
             导出ToolStripMenuItem.Text = "导出";
             // 
             // pNG图片ToolStripMenuItem
@@ -113,24 +115,26 @@
             jPG图片ToolStripMenuItem.Size = new Size(126, 22);
             jPG图片ToolStripMenuItem.Text = "JPG图片";
             // 
-            // 编辑ToolStripMenuItem
+            // 通道ToolStripMenuItem
             // 
-            编辑ToolStripMenuItem.Name = "编辑ToolStripMenuItem";
-            编辑ToolStripMenuItem.Size = new Size(44, 21);
-            编辑ToolStripMenuItem.Text = "编辑";
+            通道ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { 通道ToolStripMenuItem1 });
+            通道ToolStripMenuItem.Name = "通道ToolStripMenuItem";
+            通道ToolStripMenuItem.Size = new Size(44, 21);
+            通道ToolStripMenuItem.Text = "通道";
+            通道ToolStripMenuItem.Click += 通道ToolStripMenuItem_Click;
             // 
-            // 选项ToolStripMenuItem
+            // 通道ToolStripMenuItem1
             // 
-            选项ToolStripMenuItem.Name = "选项ToolStripMenuItem";
-            选项ToolStripMenuItem.Size = new Size(44, 21);
-            选项ToolStripMenuItem.Text = "选项";
+            通道ToolStripMenuItem1.Name = "通道ToolStripMenuItem1";
+            通道ToolStripMenuItem1.Size = new Size(100, 22);
+            通道ToolStripMenuItem1.Text = "通道";
             // 
-            // 处理ToolStripMenuItem
+            // 加窗ToolStripMenuItem
             // 
-            处理ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { FFT频谱分析ToolStripMenuItem, PSD功率谱分析ToolStripMenuItem, Hann窗FFTToolStripMenuItem, Hamming窗FFTToolStripMenuItem, Blackman窗FFTToolStripMenuItem });
-            处理ToolStripMenuItem.Name = "处理ToolStripMenuItem";
-            处理ToolStripMenuItem.Size = new Size(44, 21);
-            处理ToolStripMenuItem.Text = "处理";
+            加窗ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { FFT频谱分析ToolStripMenuItem, PSD功率谱分析ToolStripMenuItem, Hann窗FFTToolStripMenuItem, Hamming窗FFTToolStripMenuItem, Blackman窗FFTToolStripMenuItem });
+            加窗ToolStripMenuItem.Name = "加窗ToolStripMenuItem";
+            加窗ToolStripMenuItem.Size = new Size(44, 21);
+            加窗ToolStripMenuItem.Text = "加窗";
             // 
             // FFT频谱分析ToolStripMenuItem
             // 
@@ -173,6 +177,7 @@
             tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.Controls.Add(menuStrip2, 0, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 25);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -181,6 +186,14 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.Size = new Size(1184, 736);
             tableLayoutPanel1.TabIndex = 1;
+            // 
+            // menuStrip2
+            // 
+            menuStrip2.Location = new Point(0, 0);
+            menuStrip2.Name = "menuStrip2";
+            menuStrip2.Size = new Size(1184, 24);
+            menuStrip2.TabIndex = 0;
+            menuStrip2.Text = "menuStrip2";
             // 
             // MainForm
             // 
@@ -198,6 +211,8 @@
             Load += MainForm_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -211,9 +226,8 @@
         private ToolStripMenuItem 另存为ToolStripMenuItem;
         private ToolStripMenuItem 打印ToolStripMenuItem;
         private ToolStripMenuItem 导出ToolStripMenuItem;
-        private ToolStripMenuItem 编辑ToolStripMenuItem;
-        private ToolStripMenuItem 选项ToolStripMenuItem;
-        private ToolStripMenuItem 处理ToolStripMenuItem;
+        private ToolStripMenuItem 通道ToolStripMenuItem;
+        private ToolStripMenuItem 加窗ToolStripMenuItem;
         private ToolStripMenuItem FFT频谱分析ToolStripMenuItem;
         private ToolStripMenuItem PSD功率谱分析ToolStripMenuItem;
         private ToolStripMenuItem Hann窗FFTToolStripMenuItem;
@@ -223,5 +237,7 @@
         private ToolStripMenuItem pNG图片ToolStripMenuItem;
         private ToolStripMenuItem jPG图片ToolStripMenuItem;
         private TableLayoutPanel tableLayoutPanel1;
+        private ToolStripMenuItem 通道ToolStripMenuItem1;
+        private MenuStrip menuStrip2;
     }
 }

@@ -1,4 +1,5 @@
-﻿using SkiaSharp.Views.Desktop;
+﻿using ScottPlot.Colormaps;
+using SkiaSharp.Views.Desktop;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,7 @@ namespace WinFormsApp
         public MainForm()
         {
             InitializeComponent();
+            this.IsMdiContainer = true;// MDI
         }
 
 
@@ -36,13 +38,6 @@ namespace WinFormsApp
         // 用户组件userControl：时间域 UserControl1.cs 频谱
         // 子窗体childForm：
         // 另存 ， 选项设置，处理下的FFT频谱分析、PSD功率谱分析、Hann窗FFT、Hamming窗FFT、Blackman窗FFT  和 分析
-
-
-
-
-
-
-
 
 
 
@@ -142,9 +137,6 @@ namespace WinFormsApp
                     //userControl.amplitudeList = amplitudeList;
 
 
-
-
-
                     // 频率域信号
                     if (this.Controls.OfType<UserControl2>().Any())
                     {
@@ -164,18 +156,6 @@ namespace WinFormsApp
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
                     MessageBox.Show($"成功导入 {timeList.Count} 个数据点！", "成功",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -188,6 +168,52 @@ namespace WinFormsApp
 
      
         }
+
+
+
+
+        // 通道  子窗体
+
+
+        private void 通道ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+            if (!checkChildFrmExist("Channel"))
+            {
+
+                Channel channel = new Channel();//加载Chanel 
+
+                channel.MdiParent = null;//独立窗口
+
+                channel.Show();
+
+            }
+
+
+
+        }
+
+        private bool checkChildFrmExist(string childFrmName)
+        {
+            foreach (Form childFrm in this.MdiChildren)
+            {
+                //用子窗体的Name进行判断，如果已经存在则将他激活
+                if (childFrm.Name == childFrmName)
+                {
+                    if (childFrm.WindowState != FormWindowState.Maximized)
+                    {
+                        childFrm.WindowState = FormWindowState.Maximized;
+                    }
+                    childFrm.Activate();
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
+
 
 
         //********************** 菜单项事件处理函数**********************

@@ -7,11 +7,11 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <AssemblyTitle>Wave Analyst</AssemblyTitle>
-    <ApplicationIcon>resource\AppIcon.ico</ApplicationIcon>
+    <ApplicationIcon>resource\logo.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="resource\AppIcon.ico" />
+    <Content Include="resource\logo.ico" />
   </ItemGroup>
 
   <ItemGroup>
