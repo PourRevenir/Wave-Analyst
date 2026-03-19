@@ -16,11 +16,7 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WinFormsApp
-<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\Administrator\Desktop\work\APP\Wave-Analyst\Source\WinFormsApp\
-=======
-build_property.ProjectDir = G:\ProgramFiles\Time_frequency_domain_pseudo_random_signal\Wave Analyst\Source\WinFormsApp\
->>>>>>> d8b314ed1c8fee77cfe29d5e38c369cb5055b80c
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTUseWindowsUIXamlProjections = false

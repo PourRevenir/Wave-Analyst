@@ -57,12 +57,11 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { 文件ToolStripMenuItem, 编辑ToolStripMenuItem, 选项ToolStripMenuItem, 处理ToolStripMenuItem, 分析ToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-<<<<<<< HEAD
+
             menuStrip1.Padding = new Padding(5, 2, 0, 2);
             menuStrip1.Size = new Size(886, 25);
-=======
+
             menuStrip1.Size = new Size(1182, 32);
->>>>>>> d8b314ed1c8fee77cfe29d5e38c369cb5055b80c
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -85,21 +84,21 @@
             保存ToolStripMenuItem.Name = "保存ToolStripMenuItem";
             保存ToolStripMenuItem.Size = new Size(112, 22);
             保存ToolStripMenuItem.Text = "保存";
-            保存ToolStripMenuItem.Click += 保存ToolStripMenuItem_Click;
+            
             // 
             // 另存为ToolStripMenuItem
             // 
             另存为ToolStripMenuItem.Name = "另存为ToolStripMenuItem";
             另存为ToolStripMenuItem.Size = new Size(112, 22);
             另存为ToolStripMenuItem.Text = "另存为";
-            另存为ToolStripMenuItem.Click += 另存为ToolStripMenuItem_Click;
+            
             // 
             // 打印ToolStripMenuItem
             // 
             打印ToolStripMenuItem.Name = "打印ToolStripMenuItem";
             打印ToolStripMenuItem.Size = new Size(112, 22);
             打印ToolStripMenuItem.Text = "打印";
-            打印ToolStripMenuItem.Click += 打印ToolStripMenuItem_Click;
+            
             // 
             // 导出ToolStripMenuItem
             // 
@@ -111,31 +110,31 @@
             // pNG图片ToolStripMenuItem
             // 
             pNG图片ToolStripMenuItem.Name = "pNG图片ToolStripMenuItem";
-<<<<<<< HEAD
+
             pNG图片ToolStripMenuItem.Size = new Size(126, 22);
-=======
+
             pNG图片ToolStripMenuItem.Size = new Size(224, 26);
->>>>>>> d8b314ed1c8fee77cfe29d5e38c369cb5055b80c
+
             pNG图片ToolStripMenuItem.Text = "PNG图片";
-            pNG图片ToolStripMenuItem.Click += PNG图片ToolStripMenuItem_Click;
+            
             // 
             // jPG图片ToolStripMenuItem
             // 
             jPG图片ToolStripMenuItem.Name = "jPG图片ToolStripMenuItem";
-<<<<<<< HEAD
+
             jPG图片ToolStripMenuItem.Size = new Size(126, 22);
-=======
+
             jPG图片ToolStripMenuItem.Size = new Size(224, 26);
->>>>>>> d8b314ed1c8fee77cfe29d5e38c369cb5055b80c
+
             jPG图片ToolStripMenuItem.Text = "JPG图片";
-            jPG图片ToolStripMenuItem.Click += JPG图片ToolStripMenuItem_Click;
+            
             // 
             // 退出ToolStripMenuItem
             // 
             退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
             退出ToolStripMenuItem.Size = new Size(224, 26);
             退出ToolStripMenuItem.Text = "退出";
-            退出ToolStripMenuItem.Click += 退出ToolStripMenuItem_Click;
+            
             // 
             // 编辑ToolStripMenuItem
             // 
@@ -151,7 +150,7 @@
             // 
             // 处理ToolStripMenuItem
             // 
-<<<<<<< HEAD
+
             处理ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { FFT频谱分析ToolStripMenuItem, PSD功率谱分析ToolStripMenuItem, Hann窗FFTToolStripMenuItem, Hamming窗FFTToolStripMenuItem, Blackman窗FFTToolStripMenuItem });
             处理ToolStripMenuItem.Name = "处理ToolStripMenuItem";
             处理ToolStripMenuItem.Size = new Size(44, 21);
@@ -186,10 +185,9 @@
             Blackman窗FFTToolStripMenuItem.Name = "Blackman窗FFTToolStripMenuItem";
             Blackman窗FFTToolStripMenuItem.Size = new Size(163, 22);
             Blackman窗FFTToolStripMenuItem.Text = "Blackman窗FFT";
-=======
-            toolStripComboBox1.Name = "toolStripComboBox1";
-            toolStripComboBox1.Size = new Size(121, 28);
->>>>>>> d8b314ed1c8fee77cfe29d5e38c369cb5055b80c
+
+          
+
             // 
             // 分析ToolStripMenuItem
             // 
@@ -201,11 +199,11 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-<<<<<<< HEAD
+
             ClientSize = new Size(886, 531);
-=======
+
             ClientSize = new Size(1182, 753);
->>>>>>> d8b314ed1c8fee77cfe29d5e38c369cb5055b80c
+
             Controls.Add(menuStrip1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
@@ -213,7 +211,9 @@
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MainForm";
+
             Load += MainForm_Load;
+
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
