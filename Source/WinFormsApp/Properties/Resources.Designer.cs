@@ -63,9 +63,9 @@ namespace WinFormsApp.Properties {
         /// <summary>
         ///   查找 System.Byte[] 类型的本地化资源。
         /// </summary>
-        internal static byte[] AppIcon {
+        internal static byte[] logo {
             get {
-                object obj = ResourceManager.GetObject("AppIcon", resourceCulture);
+                object obj = ResourceManager.GetObject("logo", resourceCulture);
                 return ((byte[])(obj));
             }
         }
