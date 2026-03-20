@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("cmdApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0c6d5195f8c4c9d0382c0ea7e75606e39f7214a3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+184058f09dbf475b8c5975d808743d7ff309f83d")]
 [assembly: System.Reflection.AssemblyProductAttribute("cmdApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("cmdApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

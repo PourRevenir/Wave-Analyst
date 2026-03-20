@@ -1,0 +1,86 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\test\\时间域绘图测试\\时间域绘图测试.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\test\\时间域绘图测试\\时间域绘图测试.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\test\\时间域绘图测试\\时间域绘图测试.csproj",
+        "projectName": "时间域绘图测试",
+        "projectPath": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\test\\时间域绘图测试\\时间域绘图测试.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\test\\时间域绘图测试\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.200"
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "MathNet.Numerics": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "ScottPlot": {
+              "target": "Package",
+              "version": "[5.1.57, )"
+            },
+            "ScottPlot.WinForms": {
+              "target": "Package",
+              "version": "[5.1.57, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

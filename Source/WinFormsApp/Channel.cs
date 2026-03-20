@@ -37,7 +37,6 @@ namespace WinFormsApp
         private void AddInputRow(string labelText, string defaultValue = "")
         {
             rowCount++; // 行数+1
-
             tableLayoutPanel1.RowCount++;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 35));
          
@@ -65,7 +64,7 @@ namespace WinFormsApp
         // 加法
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            string newLabel = (rowCount + 1).ToString(); // 下一个序号          Add
+            string newLabel = (rowCount + 1).ToString(); // 下一个序号 
             AddInputRow(newLabel);
         }
 
@@ -75,9 +74,7 @@ namespace WinFormsApp
         {
             if (rowCount > 1) // 至少保留“1”
             {
-                int lastRowIndex = rowCount - 1; // 最后一行索引（从0开始）
-
-               
+                int lastRowIndex = rowCount - 1; // 最后一行索引
                 var controlsToRemove = tableLayoutPanel1.Controls
                     .Cast<Control>()
                     .Where(c => tableLayoutPanel1.GetRow(c) == lastRowIndex)
@@ -87,9 +84,7 @@ namespace WinFormsApp
                 foreach (var ctrl in controlsToRemove)
                 {
                     tableLayoutPanel1.Controls.Remove(ctrl);
-                }
-
-                
+                }  
                 tableLayoutPanel1.RowStyles.RemoveAt(lastRowIndex);
                 tableLayoutPanel1.RowCount--;
                 rowCount--;
@@ -99,11 +94,6 @@ namespace WinFormsApp
         // 导入信号按钮（示例）
         private void BtnImportSignal_Click(object sender, EventArgs e)
         {
-
-
-
-
-
 
 
 

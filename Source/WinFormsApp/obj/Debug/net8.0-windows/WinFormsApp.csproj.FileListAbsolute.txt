@@ -123,3 +123,4 @@ C:\Users\Administrator\Desktop\work\APP\Wave-Analyst\Source\WinFormsApp\obj\Debu
 C:\Users\Administrator\Desktop\work\APP\Wave-Analyst\Source\WinFormsApp\obj\Debug\net8.0-windows\WinFormsApp.UserControl1.resources
 C:\Users\Administrator\Desktop\work\APP\Wave-Analyst\Source\WinFormsApp\obj\Debug\net8.0-windows\WinFormsApp.UserControl2.resources
 C:\Users\Administrator\Desktop\work\APP\Wave-Analyst\Source\WinFormsApp\obj\Debug\net8.0-windows\WinFormsApp.Channel.resources
+C:\Users\Administrator\Desktop\work\APP\Wave-Analyst\Source\WinFormsApp\obj\Debug\net8.0-windows\时间域绘图测试.Form1.resources

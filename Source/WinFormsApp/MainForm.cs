@@ -11,10 +11,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace WinFormsApp
-
 {
+
+    using 时间域绘图测试;
+
+
     public partial class MainForm : Form
     {
         public MainForm()
@@ -126,21 +128,29 @@ namespace WinFormsApp
         /// </summary>
         private void UpdateTimeDomainControl(List<double> frequency, int channelNumber)
         {
-            // 移除已存在
-            RemoveExistingControl<UserControl1>();
+            //// 移除已存在
+            //RemoveExistingControl<UserControl1>();
 
-            // 创建
-            UserControl1 userControl_t = new UserControl1
+            //// 创建
+            //UserControl1 userControl_t = new UserControl1
+            //{
+            //    Dock = DockStyle.Fill
+            //};
+
+            //// 添加到布局
+            //tableLayoutPanel1.Controls.Add(userControl_t, 0, 0);
+
+
+            //// 加载数据
+            //userControl_t.LoadData(frequency, channelNumber);
+            if (!checkChildFrmExist("Form1"))
             {
-                Dock = DockStyle.Fill
-            };
+                Form1 time_ = new Form1();//加载Chanel 
+                                                //channel.MdiParent = null;//独立窗口
+                time_.Show();
+            }
 
-            // 添加到布局
-            tableLayoutPanel1.Controls.Add(userControl_t, 0, 0);
 
-           
-            // 加载数据
-            userControl_t.LoadData(frequency, channelNumber);
         }
 
 
@@ -153,17 +163,15 @@ namespace WinFormsApp
             
             RemoveExistingControl<UserControl2>();
 
-            // 创建两个频域用户控件只会显示一个
+            // 创建两个频域用户控件会显示两个
             UserControl2 userControl_f_1 = new UserControl2
             {
                 Dock = DockStyle.Fill
             };
-
             UserControl2 userControl_f_2 = new UserControl2
             {
                 Dock = DockStyle.Fill
             };
-
             tableLayoutPanel1.Controls.Add(userControl_f_1, 0, 1);
 
             tableLayoutPanel1.Controls.Add(userControl_f_2, 0, 2);

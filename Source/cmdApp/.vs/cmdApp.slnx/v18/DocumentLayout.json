@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\CmdApp\\",
+  "WorkspaceRootPath": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\cmdApp\\",
   "Documents": [
     {
       "AbsoluteMoniker": "D:0:0:{B89AB1EE-48DF-6DC3-8E11-3958447675DC}|cmdApp.csproj|c:\\users\\administrator\\desktop\\work\\app\\wave-analyst\\source\\cmdapp\\channeltask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B89AB1EE-48DF-6DC3-8E11-3958447675DC}|cmdApp.csproj|solutionrelative:channeltask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B89AB1EE-48DF-6DC3-8E11-3958447675DC}|cmdApp.csproj|c:\\users\\administrator\\desktop\\work\\app\\wave-analyst\\source\\cmdapp\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B89AB1EE-48DF-6DC3-8E11-3958447675DC}|cmdApp.csproj|solutionrelative:main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B89AB1EE-48DF-6DC3-8E11-3958447675DC}|cmdApp.csproj|c:\\users\\administrator\\desktop\\work\\app\\wave-analyst\\source\\cmdapp\\signalinterval.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B89AB1EE-48DF-6DC3-8E11-3958447675DC}|cmdApp.csproj|solutionrelative:signalinterval.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B89AB1EE-48DF-6DC3-8E11-3958447675DC}|cmdApp.csproj|c:\\users\\administrator\\desktop\\work\\app\\wave-analyst\\source\\cmdapp\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B89AB1EE-48DF-6DC3-8E11-3958447675DC}|cmdApp.csproj|solutionrelative:main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B89AB1EE-48DF-6DC3-8E11-3958447675DC}|cmdApp.csproj|c:\\users\\administrator\\desktop\\work\\app\\wave-analyst\\source\\cmdapp\\pseudorandomsignal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,67 +35,64 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "cmdApp",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\CmdApp\\cmdApp.csproj",
+              "Title": "cmdApp.csproj",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\cmdApp\\cmdApp.csproj",
               "RelativeDocumentMoniker": "cmdApp.csproj",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\CmdApp\\cmdApp.csproj",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\cmdApp\\cmdApp.csproj",
               "RelativeToolTip": "cmdApp.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-20T05:59:19.25Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-20T05:59:19.25Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "PseudoRandomSignal.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\CmdApp\\PseudoRandomSignal.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\cmdApp\\PseudoRandomSignal.cs",
               "RelativeDocumentMoniker": "PseudoRandomSignal.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\CmdApp\\PseudoRandomSignal.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\cmdApp\\PseudoRandomSignal.cs",
               "RelativeToolTip": "PseudoRandomSignal.cs",
               "ViewState": "AgIAAGQAAAAAAAAAAAAgwGoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-20T03:27:16.649Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-20T03:27:16.649Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ChannelTask.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\CmdApp\\ChannelTask.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\cmdApp\\ChannelTask.cs",
               "RelativeDocumentMoniker": "ChannelTask.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\CmdApp\\ChannelTask.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\cmdApp\\ChannelTask.cs",
               "RelativeToolTip": "ChannelTask.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAYwEMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAYwGQAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-20T02:57:10.302Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "SignalInterval.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\CmdApp\\SignalInterval.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\cmdApp\\SignalInterval.cs",
               "RelativeDocumentMoniker": "SignalInterval.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\CmdApp\\SignalInterval.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\cmdApp\\SignalInterval.cs",
               "RelativeToolTip": "SignalInterval.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAmwD0AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABcAAAAAAAAAAAAkwD0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-20T02:55:18.8Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "main.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\CmdApp\\main.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\cmdApp\\main.cs",
               "RelativeDocumentMoniker": "main.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\CmdApp\\main.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\cmdApp\\main.cs",
               "RelativeToolTip": "main.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-20T02:52:52.73Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-20T02:52:52.73Z"
             }
           ]
         }

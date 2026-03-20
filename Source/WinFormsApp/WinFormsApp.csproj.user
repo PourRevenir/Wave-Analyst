@@ -16,5 +16,8 @@
     <Compile Update="UserControl2.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="时间域绘图测试\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

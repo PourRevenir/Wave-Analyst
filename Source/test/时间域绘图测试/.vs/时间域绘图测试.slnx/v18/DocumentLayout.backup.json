@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\test\\\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7A78DD97-5D48-3B0C-A48A-EFF73520F09D}|\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5.csproj|c:\\users\\administrator\\desktop\\work\\app\\wave-analyst\\source\\test\\\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5\\method\\channeltask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A78DD97-5D48-3B0C-A48A-EFF73520F09D}|\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5.csproj|solutionrelative:method\\channeltask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A78DD97-5D48-3B0C-A48A-EFF73520F09D}|\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5.csproj|c:\\users\\administrator\\desktop\\work\\app\\wave-analyst\\source\\test\\\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A78DD97-5D48-3B0C-A48A-EFF73520F09D}|\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B009D2FD-3DE1-400A-9F5E-0CB4920920AE}|\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5.csproj|C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\test\\\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B009D2FD-3DE1-400A-9F5E-0CB4920920AE}|\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A78DD97-5D48-3B0C-A48A-EFF73520F09D}|\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5.csproj|c:\\users\\administrator\\desktop\\work\\app\\wave-analyst\\source\\test\\\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5\\method\\signalinterval.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A78DD97-5D48-3B0C-A48A-EFF73520F09D}|\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5.csproj|solutionrelative:method\\signalinterval.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A78DD97-5D48-3B0C-A48A-EFF73520F09D}|\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5.csproj|c:\\users\\administrator\\desktop\\work\\app\\wave-analyst\\source\\test\\\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5\\method\\pseudorandomsignal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A78DD97-5D48-3B0C-A48A-EFF73520F09D}|\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5.csproj|solutionrelative:method\\pseudorandomsignal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A78DD97-5D48-3B0C-A48A-EFF73520F09D}|\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5.csproj|c:\\users\\administrator\\desktop\\work\\app\\wave-analyst\\source\\test\\\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5\\method\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A78DD97-5D48-3B0C-A48A-EFF73520F09D}|\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5.csproj|solutionrelative:method\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 842,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\test\\\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\work\\APP\\\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5\\Form1.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "..\\..\\..\\..\\\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5\\Form1.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T14:59:42.939Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\test\\\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\test\\\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAIwAwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T15:00:12.185Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SignalInterval.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\test\\\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5\\Method\\SignalInterval.cs",
+              "RelativeDocumentMoniker": "Method\\SignalInterval.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\test\\\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5\\Method\\SignalInterval.cs",
+              "RelativeToolTip": "Method\\SignalInterval.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T15:05:10.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PseudoRandomSignal.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\test\\\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5\\Method\\PseudoRandomSignal.cs",
+              "RelativeDocumentMoniker": "Method\\PseudoRandomSignal.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\test\\\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5\\Method\\PseudoRandomSignal.cs",
+              "RelativeToolTip": "Method\\PseudoRandomSignal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T15:05:05.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "main.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\test\\\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5\\Method\\main.cs",
+              "RelativeDocumentMoniker": "Method\\main.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\test\\\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5\\Method\\main.cs",
+              "RelativeToolTip": "Method\\main.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T15:05:04.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChannelTask.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\test\\\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5\\Method\\ChannelTask.cs",
+              "RelativeDocumentMoniker": "Method\\ChannelTask.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\test\\\u65F6\u95F4\u57DF\u7ED8\u56FE\u6D4B\u8BD5\\Method\\ChannelTask.cs*",
+              "RelativeToolTip": "Method\\ChannelTask.cs*",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAswFwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T15:04:49.978Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

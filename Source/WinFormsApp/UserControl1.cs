@@ -32,18 +32,12 @@ namespace WinFormsApp
             set { _channelNumber = value; }
         }
 
-
-
         public UserControl1()
         {
             InitializeComponent();
             formsPlot1.Plot.Clear();
             formsPlot1.Refresh();
         }
-
-
-
-
 
         public void LoadData(List<double> times, int channelNumber)
         {
@@ -53,55 +47,60 @@ namespace WinFormsApp
         }
 
         // 绘制时间域信号图像
+
+       
         private void DrawTimeSignal(List<double> _frequency, int channelNumbert)
         {
 
-            List<double> allSignals = new List<double>();
-            for (int i = 0; i < _frequency.Count; i++)
+            // 将频率列表转换为数组
+            double[] ct_frequency = _frequency.ToArray();
+
+            var ct = new ChannelTask();
+            ct.AddInterval(samplingTime: 2, frequencyList: ct_frequency);
+
+            // 用于存储所有信号数据
+            List<int> allSignals = new List<int>();
+
+            // 遍历每个信号区间
+            for (int i = 0; i < ct.SignalIntervals.Count; i++)
             {
-
-
-                double[] ct_frequency = _frequency.ToArray();
-                var ct = new ChannelTask();
-                ct.AddInterval(samplingTime: 2.0, frequencyList: ct_frequency);
                 var signal = ct.SignalIntervals[i];
-                allSignals.Add((double)signal.Signal[i]);
+                foreach (var sample in signal.Signal)
+                {
+                    allSignals.Add(sample);
+                }
             }
 
-
-            double[] data = GenerateUniformArray(allSignals.ToArray().Length);
-
-            formsPlot1.Plot.XLabel("Frequency/Hz");
-                formsPlot1.Plot.YLabel("Amplitude/A");
-
-                var scatter = formsPlot1.Plot.Add.Scatter(allSignals.ToArray(),data );
-                // 创建散点图
-
-
-                scatter.LegendText = "1";
-                scatter.LineWidth = 1;
-                scatter.MarkerSize = 1;
-
-                formsPlot1.Refresh();
-
-            
-        }
-
-        static double[] GenerateUniformArray(int n, double min = 0.5, double max = 2.0)
-        {
-            if (n < 1) return new double[0];
-
-            double[] arr = new double[n];
-            double step = (max - min) / (n - 1);
+            int n = allSignals.Count;  
+            double[] t_data = new double[n];
+            double timeStep = 2.0 / (n - 1);
 
             for (int i = 0; i < n; i++)
             {
-                arr[i] = min + i * step;
+                t_data[i] = i * timeStep;  // 从 0 到 2
             }
 
-            return arr;
-        }
+            // 将信号数据转换为 double 数组
+            double[] signal_Data = allSignals.Select(s => (double)s).ToArray();
 
+           
+            formsPlot1.Plot.XLabel("Time/s");      // 改为时间
+            formsPlot1.Plot.YLabel("Amplitude/A");
+
+            // 清除之前的绘图
+            formsPlot1.Plot.Clear();
+
+            // 创建散点图（时域信号）
+            var scatter = formsPlot1.Plot.Add.Scatter(t_data, signal_Data);
+            scatter.LegendText = "Channel " + channelNumbert;
+            scatter.LineWidth = 1;
+            scatter.MarkerSize = 1;
+
+            // 自动调整坐标轴范围
+            formsPlot1.Plot.Axes.AutoScale();
+
+            formsPlot1.Refresh();
+        }
 
     }
 }
