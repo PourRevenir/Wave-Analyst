@@ -59,8 +59,6 @@ G:\ProgramFiles\Time_frequency_domain_pseudo_random_signal\Wave Analyst\Source\W
 G:\ProgramFiles\Time_frequency_domain_pseudo_random_signal\Wave Analyst\Source\WinFormsApp\obj\Debug\net8.0-windows\WinFormsApp.genruntimeconfig.cache
 G:\ProgramFiles\Time_frequency_domain_pseudo_random_signal\Wave Analyst\Source\WinFormsApp\obj\Debug\net8.0-windows\ref\WinFormsApp.dll
 G:\ProgramFiles\Time_frequency_domain_pseudo_random_signal\Wave Analyst\Source\WinFormsApp\obj\Debug\net8.0-windows\WinFormsApp.Properties.Resources.resources
-<<<<<<< HEAD
-=======
 C:\Users\Administrator\Desktop\work\APP\Wave-Analyst\Source\WinFormsApp\bin\Debug\net8.0-windows\WinFormsApp.exe
 C:\Users\Administrator\Desktop\work\APP\Wave-Analyst\Source\WinFormsApp\bin\Debug\net8.0-windows\WinFormsApp.deps.json
 C:\Users\Administrator\Desktop\work\APP\Wave-Analyst\Source\WinFormsApp\bin\Debug\net8.0-windows\WinFormsApp.runtimeconfig.json
@@ -125,4 +123,3 @@ C:\Users\Administrator\Desktop\work\APP\Wave-Analyst\Source\WinFormsApp\obj\Debu
 C:\Users\Administrator\Desktop\work\APP\Wave-Analyst\Source\WinFormsApp\obj\Debug\net8.0-windows\WinFormsApp.UserControl1.resources
 C:\Users\Administrator\Desktop\work\APP\Wave-Analyst\Source\WinFormsApp\obj\Debug\net8.0-windows\WinFormsApp.UserControl2.resources
 C:\Users\Administrator\Desktop\work\APP\Wave-Analyst\Source\WinFormsApp\obj\Debug\net8.0-windows\WinFormsApp.Channel.resources
->>>>>>> 047d8bf27cccca3a1b8540f9c3bb828630f9b5c2

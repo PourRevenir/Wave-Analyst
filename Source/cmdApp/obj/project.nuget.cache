@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "U9VxOaMJOzQ=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Administrator\\Desktop\\work\\APP\\Wave-Analyst\\Source\\CmdApp\\cmdApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\mathnet.numerics\\5.0.0\\mathnet.numerics.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

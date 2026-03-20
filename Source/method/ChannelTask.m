@@ -83,12 +83,13 @@ classdef ChannelTask < handle
 
                 hold on
                 grid on
+
+
                 semilogx(si.dominantFrequency, si.dominantAmplitude, 'o', ...
                     'MarkerSize', 5, ...
                     'MarkerEdgeColor', 'k', ...
                     'HandleVisibility', 'off')
                 ax = gca;
-
                 ax.FontSize = 10;
                 ax.XLabel.String = 'Frequency/Hz';
                 ax.YLabel.String = 'Amplitude/A';

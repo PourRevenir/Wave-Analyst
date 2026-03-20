@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-﻿using System;
-=======
 ﻿using ScottPlot.Colormaps;
 using SkiaSharp.Views.Desktop;
 using System;
->>>>>>> 047d8bf27cccca3a1b8540f9c3bb828630f9b5c2
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +11,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace WinFormsApp
+
 {
     public partial class MainForm : Form
     {
@@ -25,159 +23,170 @@ namespace WinFormsApp
             this.IsMdiContainer = true;// MDI
         }
 
+
         private void MainForm_Load(object sender, EventArgs e)
         {
-
+           //初始化
         }
-<<<<<<< HEAD
-=======
-
-
-        //用ToolStripMenuItem.DropDownItems.AddRange
-        // ToolStripBox 改用Item
-
-        //*********************UserControl*****************************
 
         // 用户组件userControl：时间域 UserControl1.cs 频谱
         // 子窗体childForm：
         // 另存 ， 选项设置，处理下的FFT频谱分析、PSD功率谱分析、Hann窗FFT、Hamming窗FFT、Blackman窗FFT  和 分析
 
-
-
-
-
         //********************** 菜单项事件处理函数**********************
-        /// <summary>
-        /// 导入时间域信号文件，生成时间域信号图像，并保存到内存中
-        /// </summary>
->>>>>>> 047d8bf27cccca3a1b8540f9c3bb828630f9b5c2
         private void 打开ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog ofd = new OpenFileDialog())
+            
+            int channelNumber = 0;
+            List<double> frequency = new List<double>();
+
+            // OpenFileDialog
+            OpenFileDialog openFileDialog = new OpenFileDialog
             {
-<<<<<<< HEAD
-                ofd.Filter = "文本文件(*.txt)|*.txt|DAT文件(*.dat)|*.dat";
-                if(ofd.ShowDialog() == DialogResult.OK) { }
-=======
+                Filter = "WA文件 (*.wa)|*.wa|所有文件 (*.*)|*.*",
+                Title = "选择信号文件",
+                Multiselect = false
+            };
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
                 try
                 {
-
-                    // 读取CSV文件
-                    string[] lines = File.ReadAllLines(openFileDialog.FileName);
-
-                    // 跳过第一行（表头）
-                    for (int i = 1; i < lines.Length; i++)
+                    // 读取
+                    string fileContent = File.ReadAllText(openFileDialog.FileName).Trim();
+                    MessageBox.Show($"原始文件内容:\n{fileContent}\n\n内容长度: {fileContent.Length}",
+                   "调试信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (string.IsNullOrWhiteSpace(fileContent))
                     {
-                        // 跳过空行
-                        if (string.IsNullOrWhiteSpace(lines[i]))
-                            continue;
-
-                        // 按逗号分隔
-                        string[] values = lines[i].Split(',');
-
-                        // 至少有两列数据
-                        if (values.Length >= 2)
-                        {
-                            // 解析时间
-                            if (double.TryParse(values[0], out double time))
-                            {
-                                timeList.Add(time);
-                            }
-
-                            // 解析幅值
-                            if (double.TryParse(values[1], out double amplitude))
-                            {
-                                amplitudeList.Add(amplitude);
-                            }
-                        }
-                    }
-
-                    // 检查是否有有效数据
-                    if (timeList.Count == 0 || amplitudeList.Count == 0)
-                    {
-                        MessageBox.Show("Mainform:文件中没有有效的数据！", "错误",
+                        MessageBox.Show("文件内容为空！", "错误",
                             MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
 
+                    string[] values = fileContent.Split(',');
 
-
-                    // 检查userControl组件是否已存在
-                    // 如果已经存在，先移除旧的组件
-                    if (this.Controls.OfType<UserControl1>().Any())
+                    if (values.Length < 2)
                     {
-                        var existingControl = this.Controls.OfType<UserControl1>().First();
-                        this.Controls.Remove(existingControl);
-                        existingControl.Dispose(); // 释放资源
+                        MessageBox.Show("文件格式错误：至少需要2个数据点！", "错误",
+                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
                     }
 
-                    // 数据交给UserControl1显示，通过公共接口传递数据
-
-                    // 显示用户组件
-                    UserControl1 userControl_t = new UserControl1();
-                    //添加到窗口中显示Form.ControlCollection.Add(Control) 方法
-                    tableLayoutPanel1.Controls.Add(userControl_t, 0, 0);
-
-                    // 控件属性
-                    userControl_t.Dock = DockStyle.Fill;  // 填满容器
-
-                    // 绘制
-                    userControl_t.LoadData(timeList, amplitudeList);
-
-                    //userControl.timeList= timeList;
-                    //userControl.amplitudeList = amplitudeList;
-
-
-                    // 频率域信号
-                    if (this.Controls.OfType<UserControl2>().Any())
+                    // 解析通道数
+                    if (!int.TryParse(values[0], out channelNumber) || channelNumber < 1)
                     {
-                        var existingControl = this.Controls.OfType<UserControl2>().First();
-                        this.Controls.Remove(existingControl);
-                        existingControl.Dispose();
+                        MessageBox.Show("文件格式错误：第一个值必须是有效的通道数（正整数）！", "错误",
+                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
                     }
-                    UserControl2 userControl_f = new UserControl2();
-                    tableLayoutPanel1.Controls.Add(userControl_f,0,1);
-                    userControl_f.Dock = DockStyle.Fill;
 
-                    (double[] Frequencies, double[] Amplitudes) = FFT.SimpleFFT(timeList, amplitudeList);
-                    frequencyList_f = Frequencies.ToList();
-                    amplitudeList_f = Amplitudes.ToList();
+                    // 解析频率数据
+                    for (int i = 0; i < values.Length; i++)
+                    {
+                        if (double.TryParse(values[i], out double value))
+                        {
+                            frequency.Add(value);
+                        }
+                    }
 
-                    userControl_f.LoadData(frequencyList_f, amplitudeList_f);
+                    // 检查是否有有效数据
+                    if (frequency.Count == 0)
+                    {
+                        MessageBox.Show("文件中没有有效的频率数据！", "错误",
+                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
 
+                    // 处理用户控件
+                    ProcessUserControls(frequency, channelNumber);
 
-
-                    MessageBox.Show($"成功导入 {timeList.Count} 个数据点！", "成功",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"成功导入数据\n通道数: {channelNumber}\n数据点数: {frequency.Count}",
+                        "成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show($"读取文件时发生错误：\n{ex.Message}", "错误",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
->>>>>>> 047d8bf27cccca3a1b8540f9c3bb828630f9b5c2
             }
         }
 
-        private void 保存ToolStripMenuItem_Click(object sender, EventArgs e)
+        /// <summary>
+        /// 处理用户控件的加载和显示
+        /// </summary>
+        private void ProcessUserControls(List<double> frequency, int channelNumber)
         {
-            using (SaveFileDialog sfd = new SaveFileDialog())
+            
+            UpdateTimeDomainControl(frequency, channelNumber);
+            UpdateFrequencyDomainControl(frequency, channelNumber);
+        }
+
+        /// <summary>
+        /// 更新时域用户控件
+        /// </summary>
+        private void UpdateTimeDomainControl(List<double> frequency, int channelNumber)
+        {
+            // 移除已存在
+            RemoveExistingControl<UserControl1>();
+
+            // 创建
+            UserControl1 userControl_t = new UserControl1
             {
-                sfd.Filter = "文本文件(*.txt)|*.txt|DAT文件(*.dat)|*.dat";
-                if (sfd.ShowDialog() == DialogResult.OK) { }
+                Dock = DockStyle.Fill
+            };
+
+            // 添加到布局
+            tableLayoutPanel1.Controls.Add(userControl_t, 0, 0);
+
+           
+            // 加载数据
+            userControl_t.LoadData(frequency, channelNumber);
+        }
+
+
+
+        /// <summary>
+        /// 更新频域用户控件
+        /// </summary>
+        private void UpdateFrequencyDomainControl(List<double> frequency, int channelNumber)
+        {
+            
+            RemoveExistingControl<UserControl2>();
+
+            // 创建两个频域用户控件只会显示一个
+            UserControl2 userControl_f_1 = new UserControl2
+            {
+                Dock = DockStyle.Fill
+            };
+
+            UserControl2 userControl_f_2 = new UserControl2
+            {
+                Dock = DockStyle.Fill
+            };
+
+            tableLayoutPanel1.Controls.Add(userControl_f_1, 0, 1);
+
+            tableLayoutPanel1.Controls.Add(userControl_f_2, 0, 2);
+
+            userControl_f_1.LoadData(frequency, channelNumber);
+            userControl_f_2.LoadData(frequency, channelNumber);
+        }
+
+
+        /// <summary>
+        /// 移除已存在的指定类型用户控件
+        /// </summary>
+        private void RemoveExistingControl<T>() where T : UserControl
+        {
+            var existingControls = this.tableLayoutPanel1.Controls.OfType<T>().ToList();
+
+            foreach (var control in existingControls)
+            {
+                tableLayoutPanel1.Controls.Remove(control);
+                control.Dispose();
             }
         }
 
-<<<<<<< HEAD
-        private void 另存为ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (SaveFileDialog sfd = new SaveFileDialog())
-            {
-                sfd.Filter = "文本文件(*.txt)|*.txt|DAT文件(*.dat)|*.dat";
-                if (sfd.ShowDialog() == DialogResult.OK) { }
-            }
-        }
-=======
 
 
         // 通道  子窗体
@@ -185,21 +194,12 @@ namespace WinFormsApp
 
         private void 通道ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-
             if (!checkChildFrmExist("Channel"))
             {
-
                 Channel channel = new Channel();//加载Chanel 
-
-                channel.MdiParent = null;//独立窗口
-
+                 //channel.MdiParent = null;//独立窗口
                 channel.Show();
-
             }
-
-
-
         }
 
         private bool checkChildFrmExist(string childFrmName)
@@ -220,58 +220,18 @@ namespace WinFormsApp
             return false;
         }
 
-
-
-
-
         //********************** 菜单项事件处理函数**********************
 
 
 
 
 
->>>>>>> 047d8bf27cccca3a1b8540f9c3bb828630f9b5c2
 
-        private void 打印ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (PrintDialog pd = new PrintDialog())
-            {
-                if(pd.ShowDialog() == DialogResult.OK) { }
-            }
-        }
 
-        private void PNG图片ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (SaveFileDialog sfd = new SaveFileDialog())
-            {
-                sfd.Filter = "PNG图片(*.png)|*.png";
-                if (sfd.ShowDialog() == DialogResult.OK) { }
-            }
 
-        }
 
-        private void JPG图片ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (SaveFileDialog sfd = new SaveFileDialog())
-            {
-                sfd.Filter = "PNG图片(*.jpg)|*.jpg";
-                if (sfd.ShowDialog() == DialogResult.OK) { }
-            }
 
-        }
 
-        private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show(
-                "确定要退出程序吗？",
-                "确认退出",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
 
-            if (result == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
     }
 }
