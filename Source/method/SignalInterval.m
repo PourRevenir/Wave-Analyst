@@ -1,5 +1,5 @@
 classdef SignalInterval < handle
-    properties (GetAccess = public, SetAccess = public)
+ properties (GetAccess = public, SetAccess = public)
        signal            (1, :) double = [-1 1]
        samplingTime      (1, 1) double = 1
        samplingFrequency (1, 1) double = 2
@@ -10,12 +10,25 @@ classdef SignalInterval < handle
     end
 
     properties (Access = private)
+        winFunc          
         frequencyList    (1, :) double = 1
         nSignal          (1, 1) double = 2
     end
 
     methods (Access = public)
-        function si = SignalInterval(frequency_list, n_interpolation, sampling_time)
+        function si = SignalInterval(frequency_list, n_interpolation, sampling_time, winfunc)
+            switch winfunc
+                case 'rectwin'
+                    si.winFunc = @rectwin;
+                case 'hann'
+                    si.winFunc = @hann;
+                case 'hamming'
+                    si.winFunc = @hamming;
+                case 'blackman'
+                    si.winFunc = @blackman;
+                case 'flattopwin'
+                    si.winFunc = @flattopwin;
+            end
             prs = PseudoRandomSignal(frequency_list);
             si.signal            = prs.Sampling(n_interpolation, sampling_time);
             si.frequencyList     = frequency_list;
@@ -44,7 +57,8 @@ classdef SignalInterval < handle
     methods (Access = private)
         function si = Spectrum(si)
             n = si.nSignal /2;
-            a = fft(si.signal); % win or win
+            f = si.winFunc;
+            a = fft(si.signal.*f(si.nSignal)'); % win or win
             si.frequency = (0:n-1)/si.samplingTime;
             si.amplitude = abs(a(1:n))/n;
         end

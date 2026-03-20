@@ -13,10 +13,16 @@ classdef ChannelTask < handle
             ct.SignalStack = cell(1, 5);
         end
 
-        function ct = AddInterval(ct, sampling_time, frequency_list)
+        function ct = AddInterval(ct, sampling_time, frequency_list, winfunc)
+            arguments
+                ct 
+                sampling_time  = 1
+                frequency_list = 1
+                winfunc        = 'rectwin'
+            end
             ct.nInterval = ct.nInterval + 1;
 
-            si = SignalInterval(frequency_list, 4, sampling_time);
+            si = SignalInterval(frequency_list, 4, sampling_time, winfunc);
             ct.SignalStack(ct.nInterval) = {si};
 
             ct.samplingTime = cat(2, ct.samplingTime, si.samplingTime);

@@ -11,8 +11,11 @@ clearvars
 ct = ChannelTask();
 
 
-ct.AddInterval(2, [1 32]);
-ct.AddInterval(2, [1 2 4 8 16 32]);
+ct.AddInterval(2, [1 32], 'blackman');
+ct.AddInterval(2, [1 16], 'blackman');
+ct.AddInterval(2, [4 8 16], 'blackman');
+ct.AddInterval(2, [2 4 8], 'blackman');
+ct.AddInterval(2, [1 2 4], 'blackman');
 
 ct.PlotSpectrum();
 
