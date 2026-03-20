@@ -11,16 +11,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using WinFormsApp.Forms.Channel;
+
+using WinFormsApp.UserControls;
+using WinFormsApp.Log;
+using 时间域绘图测试;
+
+
+
 namespace WinFormsApp
 {
-
-    using 时间域绘图测试;
-
-
     public partial class MainForm : Form
     {
         public MainForm()
         {
+            Logger.Info("*********************");
             InitializeComponent();
             this.IsMdiContainer = true;// MDI
         }
@@ -28,17 +33,12 @@ namespace WinFormsApp
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-           //初始化
+
         }
 
-        // 用户组件userControl：时间域 UserControl1.cs 频谱
-        // 子窗体childForm：
-        // 另存 ， 选项设置，处理下的FFT频谱分析、PSD功率谱分析、Hann窗FFT、Hamming窗FFT、Blackman窗FFT  和 分析
-
-        //********************** 菜单项事件处理函数**********************
         private void 打开ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
             int channelNumber = 0;
             List<double> frequency = new List<double>();
 
@@ -49,31 +49,29 @@ namespace WinFormsApp
                 Title = "选择信号文件",
                 Multiselect = false
             };
-
+            Logger.Info("打开文件对话框已显示，等待用户选择文件...");
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 try
                 {
                     // 读取
                     string fileContent = File.ReadAllText(openFileDialog.FileName).Trim();
-                    MessageBox.Show($"原始文件内容:\n{fileContent}\n\n内容长度: {fileContent.Length}",
-                   "调试信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Logger.Info($"文件已选择: {openFileDialog.FileName} ，文件内容是：{fileContent}");
+
                     if (string.IsNullOrWhiteSpace(fileContent))
                     {
                         MessageBox.Show("文件内容为空！", "错误",
                             MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
-
                     string[] values = fileContent.Split(',');
-
+                    Logger.Info($"文件内容已解析为{values}且有 {values.Length} 个数据点。");
                     if (values.Length < 2)
                     {
                         MessageBox.Show("文件格式错误：至少需要2个数据点！", "错误",
                             MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
-
                     // 解析通道数
                     if (!int.TryParse(values[0], out channelNumber) || channelNumber < 1)
                     {
@@ -81,7 +79,6 @@ namespace WinFormsApp
                             MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
-
                     // 解析频率数据
                     for (int i = 0; i < values.Length; i++)
                     {
@@ -90,7 +87,6 @@ namespace WinFormsApp
                             frequency.Add(value);
                         }
                     }
-
                     // 检查是否有有效数据
                     if (frequency.Count == 0)
                     {
@@ -98,12 +94,9 @@ namespace WinFormsApp
                             MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
-
                     // 处理用户控件
                     ProcessUserControls(frequency, channelNumber);
-
-                    MessageBox.Show($"成功导入数据\n通道数: {channelNumber}\n数据点数: {frequency.Count}",
-                        "成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Logger.Info($"文件处理完成，通道数: {channelNumber}，频率数据点: {frequency}。");
                 }
                 catch (Exception ex)
                 {
@@ -118,36 +111,37 @@ namespace WinFormsApp
         /// </summary>
         private void ProcessUserControls(List<double> frequency, int channelNumber)
         {
-            
+            Logger.Info("开始处理用户控件的加载和显示，函数ProcessUserControls运行");
             UpdateTimeDomainControl(frequency, channelNumber);
             UpdateFrequencyDomainControl(frequency, channelNumber);
         }
 
+
         /// <summary>
-        /// 更新时域用户控件
+        /// 更新时域
         /// </summary>
         private void UpdateTimeDomainControl(List<double> frequency, int channelNumber)
         {
-            //// 移除已存在
-            //RemoveExistingControl<UserControl1>();
 
-            //// 创建
+            //RemoveExistingControl<UserControl1>();
             //UserControl1 userControl_t = new UserControl1
             //{
             //    Dock = DockStyle.Fill
             //};
-
-            //// 添加到布局
             //tableLayoutPanel1.Controls.Add(userControl_t, 0, 0);
-
-
-            //// 加载数据
             //userControl_t.LoadData(frequency, channelNumber);
             if (!checkChildFrmExist("Form1"))
             {
-                Form1 time_ = new Form1();//加载Chanel 
-                                                //channel.MdiParent = null;//独立窗口
+                Form1 time_ = new Form1();
+                //channel.MdiParent = null;//独立窗口
+                // 紧贴父窗口下部
+                time_.FormBorderStyle = FormBorderStyle.FixedDialog; // 或 FixedToolWindow
+                time_.StartPosition = FormStartPosition.Manual;
+                int x = this.Left;
+                int y = this.Top + this.Height; // 父窗口顶部 + 父窗口高度
+                time_.Location = new Point(x, y);
                 time_.Show();
+                //time_.ShowDialog();
             }
 
 
@@ -160,9 +154,8 @@ namespace WinFormsApp
         /// </summary>
         private void UpdateFrequencyDomainControl(List<double> frequency, int channelNumber)
         {
-            
-            RemoveExistingControl<UserControl2>();
 
+            RemoveExistingControl<UserControl2>();
             // 创建两个频域用户控件会显示两个
             UserControl2 userControl_f_1 = new UserControl2
             {
@@ -172,10 +165,8 @@ namespace WinFormsApp
             {
                 Dock = DockStyle.Fill
             };
-            tableLayoutPanel1.Controls.Add(userControl_f_1, 0, 1);
-
-            tableLayoutPanel1.Controls.Add(userControl_f_2, 0, 2);
-
+            tableLayoutPanel1.Controls.Add(userControl_f_1, 0, 0);
+            tableLayoutPanel1.Controls.Add(userControl_f_2, 0, 1);
             userControl_f_1.LoadData(frequency, channelNumber);
             userControl_f_2.LoadData(frequency, channelNumber);
         }
@@ -205,8 +196,14 @@ namespace WinFormsApp
             if (!checkChildFrmExist("Channel"))
             {
                 Channel channel = new Channel();//加载Chanel 
-                 //channel.MdiParent = null;//独立窗口
-                channel.Show();
+                channel.FormBorderStyle = FormBorderStyle.FixedDialog; // 或 FixedToolWindow
+                channel.StartPosition = FormStartPosition.Manual;
+                int x = this.Right;
+                int y = this.Top; // 父窗口顶部 + 父窗口高度
+                channel.Location = new Point(x, y);
+
+                //channel.MdiParent = null;//独立窗口
+                channel.ShowDialog();
             }
         }
 
@@ -228,18 +225,11 @@ namespace WinFormsApp
             return false;
         }
 
-        //********************** 菜单项事件处理函数**********************
+        private void pNG图片ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
 
 
-
-
-
-
-
-
-
-
-
+        }
     }
 }

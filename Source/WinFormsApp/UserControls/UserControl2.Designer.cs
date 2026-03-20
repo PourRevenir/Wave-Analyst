@@ -1,0 +1,58 @@
+﻿namespace WinFormsApp.UserControls
+{
+    partial class UserControl2
+    {
+        /// <summary> 
+        /// 必需的设计器变量。
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// 清理所有正在使用的资源。
+        /// </summary>
+        /// <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region 组件设计器生成的代码
+
+        /// <summary> 
+        /// 设计器支持所需的方法 - 不要修改
+        /// 使用代码编辑器修改此方法的内容。
+        /// </summary>
+        private void InitializeComponent()
+        {
+            formsPlot2 = new ScottPlot.WinForms.FormsPlot();
+            SuspendLayout();
+            // 
+            // formsPlot2
+            // 
+            formsPlot2.DisplayScale = 1F;
+            formsPlot2.Location = new Point(4, 0);
+            formsPlot2.Margin = new Padding(4);
+            formsPlot2.Name = "formsPlot2";
+            formsPlot2.Size = new Size(480, 149);
+            formsPlot2.TabIndex = 0;
+            // 
+            // UserControl2
+            // 
+            AutoScaleDimensions = new SizeF(9F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(formsPlot2);
+            Margin = new Padding(4);
+            Name = "UserControl2";
+            Size = new Size(546, 158);
+            ResumeLayout(false);
+        }
+
+        #endregion
+
+        private ScottPlot.WinForms.FormsPlot formsPlot2;
+    }
+}

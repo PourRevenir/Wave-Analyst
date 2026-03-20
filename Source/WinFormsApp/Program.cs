@@ -1,3 +1,6 @@
+using WinFormsApp.Forms.Splash;
+
+
 namespace WinFormsApp
 {
     internal static class Program
@@ -9,7 +12,7 @@ namespace WinFormsApp
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            using (SplashForm splashForm = new SplashForm())
+            using (SplashForm splashForm = new SplashForm())//为什么要用using
             {
                 splashForm.Show();
                 splashForm.Refresh();
